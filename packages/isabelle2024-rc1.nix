@@ -69,7 +69,7 @@ in stdenv.mkDerivation (finalAttrs: rec {
       fetchurl
         {
           url = "https://isabelle.in.tum.de/website-${dirname}/dist/${dirname}_macos.tar.gz";
-          sha256 = "sha256-0VSW2SrHNI3/k4cCCZ724ruXaq7W1NCPsLrXFZ9l1/Q=";
+          sha256 = "sha256-jSw03Q5zEAK0S4bu9mqHrVmr60bTXcY0IZIHD1DsRCk=";
         }
     else if stdenv.hostPlatform.isx86
     then
@@ -80,7 +80,7 @@ in stdenv.mkDerivation (finalAttrs: rec {
     else
       fetchurl {
         url = "https://isabelle.in.tum.de/website-${dirname}/dist/${dirname}_linux_arm.tar.gz";
-        hash = "sha256-Tzxxs0gKw6vymbaXIzH8tK5VgUrpOIp9vcWQ/zxnRCc=";
+        hash = "sha256-D15NxerMBCg9pc9+PgCMlkECKv9eeWF8aD2J8GRIR2E=";
       };
 
   nativeBuildInputs = [ java ];
