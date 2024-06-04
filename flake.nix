@@ -15,9 +15,9 @@
         let 
           pkgs = nixpkgs.legacyPackages.${system};
         in rec {
-          isabelle2023-vsce = pkgs.callPackage ./packages/isabelle2023-vsce.nix {};
-          isabelle2024-rc1 = pkgs.callPackage ./packages/isabelle2024-rc1.nix {};
-          isabelle2024-rc1-vsce = pkgs.callPackage ./packages/isabelle2024-rc1-vsce.nix { inherit isabelle2024-rc1; };
+          isabelle2023-vsce = pkgs.callPackage ./packages/isabelle/isabelle2023-vsce.nix {};
+          isabelle2024-rc1 = pkgs.callPackage ./packages/isabelle/isabelle2024-rc1.nix {};
+          isabelle2024-rc1-vsce = pkgs.callPackage ./packages/isabelle/isabelle2024-rc1-vsce.nix { inherit isabelle2024-rc1; };
           nixln-edit = inputs.nixln-edit.packages.${system}.nixln-edit;
         });
     in {
