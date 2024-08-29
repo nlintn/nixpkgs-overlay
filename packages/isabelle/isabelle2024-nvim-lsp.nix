@@ -1,8 +1,8 @@
-{ isabelle2024
+{ isabelle
 , fetchFromGitHub
 }:
 
-isabelle2024.overrideAttrs (final: prev:
+isabelle.overrideAttrs (final: prev:
   let
     src_dev = fetchFromGitHub {
       owner = "Treeniks";
