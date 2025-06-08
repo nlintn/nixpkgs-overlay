@@ -11,15 +11,10 @@
   outputs = { self, nixpkgs, ... } @ inputs: 
     let 
       eachSystem = nixpkgs.lib.genAttrs [ "aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux" ];
-      packages = (system:
-        let 
-          pkgs = nixpkgs.legacyPackages.${system};
-        in rec {
-          isabelle2024-nvim-lsp = pkgs.callPackage ./packages/isabelle/isabelle2024-nvim-lsp.nix {};
-          nixln-edit = inputs.nixln-edit.packages.${system}.nixln-edit;
-        });
-    in {
-      overlays.default = (final: prev: packages prev.system);
-      packages = eachSystem (system: packages system);
+    in rec {
+      overlays.default = (final: prev: {
+        nixln-edit = inputs.nixln-edit.packages.${final.system}.nixln-edit;
+      });
+      packages = eachSystem (system: nixpkgs.legacyPackages.${system}.extend (overlays.default));
     };
 }
