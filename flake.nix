@@ -9,10 +9,12 @@
   };
 
   outputs = { self, nixpkgs, ... }:
-    let 
-      eachSystem = nixpkgs.lib.genAttrs [ "aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux" ];
+    let
+      lib = nixpkgs.lib;
+      eachSystem = lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages);
     in {
       overlays.default = import ./. { inherit self; };
-      packages = eachSystem (system: import ./packages.nix { pkgs = import nixpkgs { inherit system; }; inherit self; });
+      packages = eachSystem (system: import ./packages { pkgs = import nixpkgs { inherit system; }; inherit self; });
+      lib = import ./lib lib;
     };
 }
