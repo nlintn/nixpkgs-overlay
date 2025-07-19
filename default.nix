@@ -1,3 +1,1 @@
-{ self ? null }:
-
-final: prev: prev.lib.recursiveUpdate prev (import ./packages.nix { pkgs = prev; inherit self; })
+import ./overlay-fun.nix { self = builtins.getFlake ./.; }
