@@ -11,10 +11,10 @@
   outputs = { self, nixpkgs, ... }:
     let
       lib = nixpkgs.lib;
-      eachSystem = lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages);
+      eachSystemPkgs = f: builtins.mapAttrs (_: f) (lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages) (system: import nixpkgs { inherit system; }));
     in {
-      overlays.default = import ./. { inherit self; };
-      packages = eachSystem (system: import ./packages { pkgs = import nixpkgs { inherit system; }; inherit self; });
+      overlays.default = import ./overlay-fun.nix { inherit self; };
+      packages = eachSystemPkgs (pkgs: import ./packages { inherit pkgs self; });
       lib = import ./lib lib;
     };
 }
