@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "nixpkgs";
 
     nixln-edit = {
       url = "github:nlintn/nixln-edit";
