@@ -1,4 +1,5 @@
-{ fetchFromGitHub
+{ acpi
+, fetchFromGitHub
 , lua51Packages
 , neovimUtils
 , writeText
@@ -15,6 +16,7 @@ neovimUtils.buildNeovimPlugin {
       sha256 = "sha256-Om85x/F84u8yTFXOnjZLtUG7LgLXcf12EWO1sk+ul0c=";
     };
     propagatedBuildInputs = with lua51Packages; [ plenary-nvim nvim-web-devicons ];
+    buildInputs = [ acpi ];
     knownRockspec = writeText "${pname}-${version}.rockspec" ''
       package = "${pname}"
       version = "${version}"
