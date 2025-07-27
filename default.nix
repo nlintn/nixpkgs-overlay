@@ -1,1 +1,1 @@
-import ./overlay-fun.nix { self = builtins.getFlake ./.; }
+final: prev: prev.lib.recursiveUpdate prev (import ./packages { pkgs = prev; })

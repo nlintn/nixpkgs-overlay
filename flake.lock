@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "nixln-edit": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1752979247,
-        "narHash": "sha256-3juV/Vs6jNjDo3txcqjec4Z8/fjCkDNuQGZ7HgrULWo=",
-        "owner": "nlintn",
-        "repo": "nixln-edit",
-        "rev": "ffcef633a1dc01947ec30168565f7fe7c688b589",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nlintn",
-        "repo": "nixln-edit",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1752900028,
@@ -36,7 +16,6 @@
     },
     "root": {
       "inputs": {
-        "nixln-edit": "nixln-edit",
         "nixpkgs": "nixpkgs"
       }
     }

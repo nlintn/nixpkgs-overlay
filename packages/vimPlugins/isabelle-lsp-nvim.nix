@@ -4,15 +4,13 @@ fetchSources:
 , neovimUtils
 , writeText
 }:
-
-neovimUtils.buildNeovimPlugin {
+ neovimUtils.buildNeovimPlugin {
   luaAttr = lua51Packages.buildLuarocksPackage rec {
-    pname = "telescope-tabs";
+    pname = "isabelle-lsp.nvim";
     version = "scm-1";
-    src = fetchSources "https://github.com/LukasPietzschmann/telescope-tabs";
-    propagatedBuildInputs = with lua51Packages; [ telescope-nvim ];
+    src = fetchSources "https://github.com/Treeniks/isabelle-lsp.nvim";
     disabled = lua51Packages.lua.luaversion != "5.1";
-    knownRockspec = writeText "${pname}-${version}.rockspec" ''
+    knownRockspec = writeText "isabelle-lsp.nvim-scm-1.rockspec" ''
       package = "${pname}"
       version = "${version}"
       source = {
@@ -20,15 +18,14 @@ neovimUtils.buildNeovimPlugin {
       }
       dependencies = {
         "lua == 5.1",
-        "telescope.nvim",
       }
       build = {
         type = "builtin",
         modules = {
-          ["telescope-tabs"] = "lua/telescope-tabs.lua",
+          ["isabelle-lsp"] = "lua/isabelle-lsp.lua",
         },
       }
     '';
   };
-  nvimRequiredCheck = "telescope-tabs";
+  nvimRequiredCheck = "isabelle-lsp";
 }

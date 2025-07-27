@@ -1,11 +1,12 @@
-{ pkgs ? import <nixpkgs> {}, self ? builtins.getFlake (builtins.toString ./..) }:
+{ pkgs ? import <nixpkgs> {} }:
 
 let
-    inputs = self.inputs;
-in {
-  nixln-edit = inputs.nixln-edit.packages.${pkgs.system}.nixln-edit;
-  
-  vimPlugins.battery-nvim = pkgs.callPackage ./vimPlugins/battery-nvim.nix { };
-  vimPlugins.isabelle-syn-nvim = pkgs.callPackage ./vimPlugins/isabelle-syn-nvim.nix { };
-  vimPlugins.telescope-tabs = pkgs.callPackage ./vimPlugins/telescope-tabs.nix { };
-}
+  lib = pkgs.lib;
+  lib' = import ../lib lib;
+
+  sources = builtins.fromJSON (builtins.readFile ./sources.json);
+  fetchSources = url: with sources.${url}; (builtins.${"fetch${type}"} { inherit url rev narHash; }) // sources.${url};
+
+  files = builtins.filter (f: lib.hasSuffix ".nix" f && f != (builtins.toString ./default.nix)) (lib'.readDirRecursive ./.);
+in
+  lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./. files
