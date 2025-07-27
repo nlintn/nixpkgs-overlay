@@ -8,6 +8,8 @@
       packages = lib'.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
       lib = lib';
       lib' = lib';
+      homeManagerModule = import ./homeManagerModule;
+      homeManagerModules.default = self.homeManagerModule;
     };
 
   inputs = {
