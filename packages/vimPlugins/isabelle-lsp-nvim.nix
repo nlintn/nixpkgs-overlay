@@ -4,9 +4,11 @@ fetchSources:
 , neovimUtils
 , writeText
 }:
- neovimUtils.buildNeovimPlugin {
+
+neovimUtils.buildNeovimPlugin rec {
+  name = "isabelle-lsp.nvim";
   luaAttr = lua51Packages.buildLuarocksPackage rec {
-    pname = "isabelle-lsp.nvim";
+    pname = name;
     version = "scm-1";
     src = fetchSources "https://github.com/Treeniks/isabelle-lsp.nvim";
     disabled = lua51Packages.lua.luaversion != "5.1";

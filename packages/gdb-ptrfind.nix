@@ -1,9 +1,9 @@
 fetchSources:
 
-{ stdenv
+{ stdenvNoCC
 }:
 
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   name = "gdb-ptrfind";
   src = (fetchSources "https://github.com/ChaChaNop-Slide/ptrfind");
   phases = [ "unpackPhase" "installPhase" ];

@@ -6,9 +6,10 @@ fetchSources:
 , writeText
 }:
 
-neovimUtils.buildNeovimPlugin {
+neovimUtils.buildNeovimPlugin rec {
+  name = "battery.nvim";
   luaAttr = lua51Packages.buildLuarocksPackage rec {
-    pname = "battery.nvim";
+    pname = name;
     version = "scm-1";
     src = fetchSources "https://github.com/justinhj/battery.nvim";
     propagatedBuildInputs = with lua51Packages; [ plenary-nvim nvim-web-devicons ];

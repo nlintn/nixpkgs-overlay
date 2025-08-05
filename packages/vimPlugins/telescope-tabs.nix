@@ -5,9 +5,10 @@ fetchSources:
 , writeText
 }:
 
-neovimUtils.buildNeovimPlugin {
+neovimUtils.buildNeovimPlugin rec {
+  name = "telescope-tabs";
   luaAttr = lua51Packages.buildLuarocksPackage rec {
-    pname = "telescope-tabs";
+    pname = name;
     version = "scm-1";
     src = fetchSources "https://github.com/LukasPietzschmann/telescope-tabs";
     propagatedBuildInputs = with lua51Packages; [ telescope-nvim ];
