@@ -5,7 +5,8 @@
       lib' = import ./lib lib;
     in {
       overlays.default = import ./.;
-      packages = lib'.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
+      legacyPackages = lib'.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
+      test = lib'.eachSystemPkgs nixpkgs (pkgs: import ./test.nix pkgs self);
       lib = lib';
       lib' = lib';
       homeManagerModule = import ./homeManagerModule;
