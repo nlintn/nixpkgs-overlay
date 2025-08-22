@@ -1,1 +1,44 @@
-{"https://github.com/ChaChaNop-Slide/ptrfind":{"narHash":"sha256-08hkPKSjGYRoSf4q56NL9hmuNLYmm3gL3T5fecrfkmM=","rev":"ce981b9f5ca4ad49a5fc5b59dc72b17119c4e69a","type":"Git"},"https://github.com/LukasPietzschmann/telescope-tabs":{"narHash":"sha256-++iTyrjl6IX2GmwljbgcwiYvZ3ghsX732VWMcyu1ciw=","rev":"9ca0800d4e9c2610d5cac4d121cde0d9fbd89a64","type":"Git"},"https://github.com/Treeniks/isabelle-lsp.nvim":{"narHash":"sha256-rtwhEB8Aq+2RbS4ZtydKmodwfk2N6LE5GIBdfu8Ru04=","rev":"8eaf60f08d7f3ec6782d12327fa7e1b88545bd7c","type":"Git"},"https://github.com/Treeniks/isabelle-syn.nvim":{"narHash":"sha256-f04jyExUwos9w89IeKbRdRMtWIsQYe0McAUoijq7mCA=","rev":"114b06dc34edf1707be7249b5a3815733e68d4c9","type":"Git"},"https://github.com/hyprwm/contrib":{"narHash":"sha256-PFAJoEqQWMlo1J+yZb+4HixmhbRVmmNl58e/AkLYDDI=","rev":"6839b23345b71db17cd408373de4f5605bf589b8","type":"Git"},"https://github.com/justinhj/battery.nvim":{"narHash":"sha256-VhfsK7Q4qdOAhmHGV5Mhflso8KeUW3OIHd5++0Dgs/s=","rev":"ecc6cf13312a26179f67d3b99d203da9285b9b0a","type":"Git"},"https://github.com/nlintn/nixln-edit":{"narHash":"sha256-QwnPSfQ+iKZ/R2FYrJyi5avaeL+PAbh8lswrGaxLoqQ=","rev":"4fdcf1a8acc038b3810881869be64b41f5b1085c","type":"Git"},"https://github.com/pwndbg/pwndbg":{"narHash":"sha256-7npbcKY63scp4Rvx5ckxSJSsXYOgnk8EajomwEZbH7o=","rev":"a6d3f4e4b27e60b27c0e4d4cb761e64778f36164","type":"Git"}}
+{
+  "https://github.com/ChaChaNop-Slide/ptrfind": {
+    "narHash": "sha256-08hkPKSjGYRoSf4q56NL9hmuNLYmm3gL3T5fecrfkmM=",
+    "rev": "ce981b9f5ca4ad49a5fc5b59dc72b17119c4e69a",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/LukasPietzschmann/telescope-tabs": {
+    "narHash": "sha256-t4kKtQ5/oUgR2InAmciuWBtx0NsxzINvy2NzHp6oBIc=",
+    "rev": "d16fae006ba978ccc5c5579d40f358e12a0f8d30",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/Treeniks/isabelle-lsp.nvim": {
+    "narHash": "sha256-rtwhEB8Aq+2RbS4ZtydKmodwfk2N6LE5GIBdfu8Ru04=",
+    "rev": "8eaf60f08d7f3ec6782d12327fa7e1b88545bd7c",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/Treeniks/isabelle-syn.nvim": {
+    "narHash": "sha256-f04jyExUwos9w89IeKbRdRMtWIsQYe0McAUoijq7mCA=",
+    "rev": "114b06dc34edf1707be7249b5a3815733e68d4c9",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/hyprwm/contrib": {
+    "narHash": "sha256-g7/g5o0spemkZCzPa8I21RgCmN0Kv41B5z9Z5HQWraY=",
+    "rev": "04721247f417256ca96acf28cdfe946cf1006263",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/justinhj/battery.nvim": {
+    "narHash": "sha256-VhfsK7Q4qdOAhmHGV5Mhflso8KeUW3OIHd5++0Dgs/s=",
+    "rev": "ecc6cf13312a26179f67d3b99d203da9285b9b0a",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/nlintn/nixln-edit": {
+    "narHash": "sha256-QwnPSfQ+iKZ/R2FYrJyi5avaeL+PAbh8lswrGaxLoqQ=",
+    "rev": "4fdcf1a8acc038b3810881869be64b41f5b1085c",
+    "submodules": false,
+    "type": "git"
+  }
+}

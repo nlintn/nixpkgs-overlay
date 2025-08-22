@@ -5,8 +5,8 @@ let
   lib' = import ../lib lib;
 
   sources = builtins.fromJSON (builtins.readFile ./sources.json);
-  fetchSources = url: with sources.${url}; (builtins.${"fetch${type}"} { inherit url rev narHash; }) // sources.${url};
+  fetchSources = url: (builtins.fetchTree (sources.${url} // { inherit url; }));
 
-  files = builtins.filter (f: lib.hasSuffix ".nix" f && f != (builtins.toString ./default.nix)) (lib'.readDirRecursive ./.);
+  files = builtins.filter (f: lib.hasSuffix ".nix" f) (lib'.readDirRecursive ./by-name);
 in
-  lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./. files
+  lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./by-name files
