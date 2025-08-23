@@ -8,5 +8,8 @@ let
   fetchSources = url: (builtins.fetchTree (sources.${url} // { inherit url; }));
 
   files = builtins.filter (f: lib.hasSuffix ".nix" f) (lib'.readDirRecursive ./by-name);
+  by-name = lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./by-name files;
+
+  firefoxAddons = pkgs.callPackages ./firefoxAddons {};
 in
-  lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./by-name files
+  by-name // { inherit firefoxAddons; }
