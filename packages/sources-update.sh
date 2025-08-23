@@ -14,3 +14,5 @@ json=$(nix-build --no-out-link --expr \
     ) &&
 cat $json > sources.json
 echo "updated $(pwd)/sources.json"
+
+for f in $(find -regex './.*/sources-update\.sh'); do "$f"; done
