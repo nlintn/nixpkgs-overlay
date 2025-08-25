@@ -1,6 +1,7 @@
 fetchSources:
 
-{ stdenvNoCC
+{ gdb
+, stdenvNoCC
 }:
 
 stdenvNoCC.mkDerivation {
@@ -11,4 +12,5 @@ stdenvNoCC.mkDerivation {
     mkdir -p $out
     cp $src/ptrfind.py $out/
   '';
+  meta.platforms = gdb.meta.platforms;
 }

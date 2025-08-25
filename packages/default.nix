@@ -11,5 +11,8 @@ let
   by-name = lib'.nixFilesToAttrs (f: pkgs.callPackage (import f fetchSources) {}) ./by-name by-name-files;
 
   firefoxAddons = pkgs.callPackages ./firefoxAddons {};
+
+  merged = by-name // { inherit firefoxAddons; };
 in
-  by-name // { inherit firefoxAddons; }
+  lib.filterAttrsRecursive (_: v: v.type or "" != "derivation" ||
+    builtins.any (sys: sys == pkgs.system) v.meta.platforms or lib.platforms.all) merged
