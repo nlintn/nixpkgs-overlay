@@ -12,16 +12,10 @@ let
     );
     eachSystem = nixpkgs: lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages);
     eachSystemPkgs = nixpkgs: f: builtins.mapAttrs (_: f) (eachSystem nixpkgs (system: import nixpkgs { inherit system; }));
-    readDirRecursive = cwd:
+    nixFilesToAttrs = f: prefix_to_remove: files:
       let
-        cwd' = builtins.toString cwd;
-        filterContents = t: builtins.attrNames (lib.filterAttrs (_: v: v == t) (builtins.readDir cwd'));
-        f = filterContents "regular"; d = filterContents "directory";
-      in (builtins.map (f: "${cwd'}/${f}") f) ++ (lib.flatten (builtins.map (d: readDirRecursive "${cwd'}/${d}") d));
-    nixFilesToAttrs = f: cwd: files:
-      let
-        cwd_len = builtins.length (lib.splitString "/" (builtins.toString cwd));
-        attr_paths = builtins.map (file: {
+        cwd_len = builtins.length (lib.splitString "/" (builtins.toString prefix_to_remove));
+        attr_paths = builtins.map (file': let file = builtins.toString file'; in {
           attr_path = let fp = (lib.splitString "/" file); apr = lib.reverseList (lib.sublist cwd_len (builtins.length fp) fp);
             in lib.reverseList ([ (lib.removeSuffix ".nix" (builtins.head apr)) ] ++ (if apr == [] then [] else builtins.tail apr));
           value = f file;
