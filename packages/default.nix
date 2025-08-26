@@ -14,5 +14,4 @@ let
 
   merged = by-name // { inherit firefoxAddons; };
 in
-  lib.filterAttrsRecursive (_: v: v.type or "" != "derivation" ||
-    builtins.any (sys: sys == pkgs.system) v.meta.platforms or lib.platforms.all) merged
+  merged
