@@ -18,9 +18,15 @@ jobs:
     - name: update all packages
       run: ./packages/sources-update.sh
       shell: bash
+    - name: check for changes
+      id: changes
+      continue-on-error: true
+      run: git diff --exit-code --quiet
     - name: run build checks
+      if: ${{ steps.changes.outcome == 'failure' }}
       run: nix flake check
     - name: commit changes
+      if: ${{ steps.changes.outcome == 'failure' }}
       uses: stefanzweifel/git-auto-commit-action@v6
       with:
         commit_message: Update packages [automatic]
