@@ -15,6 +15,8 @@ jobs:
       uses: cachix/install-nix-action@v31
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: update flake lock file
+      run: nix flake update
     - name: update all packages
       run: ./packages/sources-update.sh
       shell: bash
