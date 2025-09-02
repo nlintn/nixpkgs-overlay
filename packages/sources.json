@@ -6,8 +6,8 @@
     "type": "git"
   },
   "https://github.com/LukasPietzschmann/telescope-tabs": {
-    "narHash": "sha256-t4kKtQ5/oUgR2InAmciuWBtx0NsxzINvy2NzHp6oBIc=",
-    "rev": "d16fae006ba978ccc5c5579d40f358e12a0f8d30",
+    "narHash": "sha256-5NpH9+0ECrcKi8quPLpCHLSPTuzGETWtq4E+2jqUKio=",
+    "rev": "777b1f630f3d6a12a2e71635a82581c988d6da2e",
     "submodules": false,
     "type": "git"
   },
