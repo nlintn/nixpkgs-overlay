@@ -24,10 +24,10 @@
     };
     "keepassxc-browser" = buildFirefoxXpiAddon {
       pname = "keepassxc-browser";
-      version = "1.9.9.5";
+      version = "1.9.9.6";
       addonId = "keepassxc-browser@keepassxc.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4570842/keepassxc_browser-1.9.9.5.xpi";
-      sha256 = "469fde3170dacfdf153b033c712e8b6ae310ba85473bc16676655b668a563556";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4575368/keepassxc_browser-1.9.9.6.xpi";
+      sha256 = "72e6b7d55dcd6596e0dbdcf2e245b74560a3517701c64ac3aef0d1b9634dbef2";
       meta = with lib;
       {
         homepage = "https://keepassxc.org/";
@@ -55,10 +55,10 @@
     };
     "ublock-origin" = buildFirefoxXpiAddon {
       pname = "ublock-origin";
-      version = "1.65.0";
+      version = "1.66.0";
       addonId = "uBlock0@raymondhill.net";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.65.0.xpi";
-      sha256 = "3e73c96a29a933866065f0756fe032984bf5b254af8dd1afd7a7f7e0668a33cf";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4573289/ublock_origin-1.66.0.xpi";
+      sha256 = "155820bace5bf7c8ba547e27678a4a25251131c54904f02f5bf340996f6fdbdc";
       meta = with lib;
       {
         homepage = "https://github.com/gorhill/uBlock#ublock-origin";
