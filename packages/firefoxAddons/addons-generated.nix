@@ -22,6 +22,20 @@
         platforms = platforms.all;
       };
     };
+    "dictionary-german" = buildFirefoxXpiAddon {
+      pname = "dictionary-german";
+      version = "2.1";
+      addonId = "de-DE@dictionaries.addons.mozilla.org";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4034565/dictionary_german-2.1.xpi";
+      sha256 = "00ef6eb3c10171a87fb22ab6e516846678b73c56ae828cc19d11e32e43b8457a";
+      meta = with lib;
+      {
+        description = "German Dictionary (new Orthography) for spellchecking in Firefox";
+        license = licenses.lgpl21;
+        mozPermissions = [];
+        platforms = platforms.all;
+      };
+    };
     "keepassxc-browser" = buildFirefoxXpiAddon {
       pname = "keepassxc-browser";
       version = "1.9.9.6";
