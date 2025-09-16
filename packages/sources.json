@@ -24,8 +24,8 @@
     "type": "git"
   },
   "https://github.com/hyprwm/contrib": {
-    "narHash": "sha256-IUDbY2sjfa+ySyI+BEw61QANuzCYXGIdCrbkULLAr1s=",
-    "rev": "bc9dbdebbebeb8eb75115a865f74c8acc3ec2424",
+    "narHash": "sha256-+wZhFb5+MOmKbYZBsc+jeLRlHgoPlFf3lXBRX0YY0Kc=",
+    "rev": "e7aaa6725c5597041330f371451116f1b2d1f88b",
     "submodules": false,
     "type": "git"
   },
