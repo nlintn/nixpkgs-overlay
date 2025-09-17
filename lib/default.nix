@@ -3,7 +3,7 @@ lib:
 let
   main = rec {
     attrsToListRecursive = attrs:
-      let aux = lib.mapAttrsToList (_: v: if builtins.isAttrs v && (v.type or "" != "derivation") then aux v else v);
+      let aux = lib.mapAttrsToList (_: v: if builtins.isAttrs v && !lib.isDerivation v then aux v else v);
       in lib.flatten (aux attrs);
     capitalizeString = str: (
       (lib.toUpper (lib.substring 0 1 str))
