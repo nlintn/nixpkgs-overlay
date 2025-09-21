@@ -12,12 +12,14 @@ let
     );
     eachSystem = nixpkgs: lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages);
     eachSystemPkgs = nixpkgs: f: builtins.mapAttrs (_: f) (eachSystem nixpkgs (system: import nixpkgs { inherit system; }));
-    nixFilesToAttrs = f: prefix_to_remove: files:
+    filesToAttrs = f: prefix_to_remove: suffix_to_remove: files:
       let
-        cwd_len = builtins.length (lib.splitString "/" (builtins.toString prefix_to_remove));
+        prefix_to_remove' = builtins.toString prefix_to_remove;
+        suffix_to_remove' = builtins.toString suffix_to_remove;
         attr_paths = builtins.map (file': let file = builtins.toString file'; in {
-          attr_path = let fp = (lib.splitString "/" file); apr = lib.reverseList (lib.sublist cwd_len (builtins.length fp) fp);
-            in lib.reverseList ([ (lib.removeSuffix ".nix" (builtins.head apr)) ] ++ (if apr == [] then [] else builtins.tail apr));
+          attr_path = let
+            path_list = lib.splitString "/" (lib.removeSuffix suffix_to_remove' (lib.removePrefix prefix_to_remove' file));
+          in lib.sublist 1 (builtins.length path_list - 2) path_list;
           value = f file;
         }) files;
       in builtins.foldl' lib.recursiveUpdate {} (builtins.map ({ attr_path, value }: lib.setAttrByPath attr_path value) attr_paths);
