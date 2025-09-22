@@ -1,4 +1,5 @@
-{ callPackages
+{ callPackage
+, callPackages
 , fetchurl
 , lib
 , stdenv
@@ -34,4 +35,5 @@ let
       '';
     }
   );
-in callPackages ./addons-generated.nix { inherit buildFirefoxXpiAddon; }
+  addons-generated = lib.makeExtensible (_: callPackages ./addons-generated.nix { inherit buildFirefoxXpiAddon; });
+in addons-generated.extend (callPackage ./overrides.nix {})

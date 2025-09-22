@@ -162,4 +162,27 @@
         platforms = platforms.all;
       };
     };
+    "zen-internet" = buildFirefoxXpiAddon {
+      pname = "zen-internet";
+      version = "2.7.0";
+      addonId = "{91aa3897-2634-4a8a-9092-279db23a7689}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4537733/zen_internet-2.7.0.xpi";
+      sha256 = "3c43e841136388eea54a3bf9c993482b5eaa62025a7895a852abaa6c4651d35a";
+      meta = with lib;
+      {
+        homepage = "https://www.sameerasw.com";
+        description = "Inject custom css to make the web beautiful in Zen Browser";
+        license = licenses.mit;
+        mozPermissions = [
+          "activeTab"
+          "storage"
+          "tabs"
+          "<all_urls>"
+          "webNavigation"
+          "webRequest"
+          "webRequestBlocking"
+        ];
+        platforms = platforms.all;
+      };
+    };
   }
