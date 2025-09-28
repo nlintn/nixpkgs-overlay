@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
-builtin cd -- $(dirname $0)
-echo -e " + $(pwd)/$(basename $0)\n"
+builtin cd -- "$(dirname "$0")"
+echo -e " + $(pwd)/$(basename "$0")\n"
 
 prev_addons=$(cat addons-generated.nix)
 nix run --option experimental-features "flakes nix-command" \
