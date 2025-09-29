@@ -23,6 +23,12 @@
     "submodules": false,
     "type": "git"
   },
+  "https://github.com/ej-shafran/compile-mode.nvim": {
+    "narHash": "sha256-Us/xHSVZyRU2tozC0iu7JLIgXbC6D3geAWNLEO+IZoA=",
+    "rev": "e94543312729df6cc6efc8a136e9a58d52099df2",
+    "submodules": false,
+    "type": "git"
+  },
   "https://github.com/hyprwm/contrib": {
     "narHash": "sha256-iRv5afKzuu6SkwztqMwZ33161CzBJsyeRHp0uviN9TI=",
     "rev": "de79078fd59140067e53cd00ebdf17f96ce27846",
