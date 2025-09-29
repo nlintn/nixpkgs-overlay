@@ -13,8 +13,8 @@ json=$(nix-instantiate --option substitute false --eval --raw --argstr nixpkgs "
     let
         pkgs = import nixpkgs {};
     in builtins.toJSON (
-        builtins.mapAttrs (url: {type ? "git", ...} @ args:
-            (attrs: args // (pkgs.lib.filterAttrs (n: _: n == "narHash" || n == "rev" || n == "submodules" || n == "type" ) attrs))
+        builtins.mapAttrs (url: { type ? "git", ... } @ args:
+            (attrs: { inherit type; } // args // (pkgs.lib.filterAttrs (n: _: n == "narHash" || n == "rev" || n == "submodules" ) attrs))
             (builtins.fetchTree { inherit type url; }))
         (builtins.fromJSON (builtins.readFile ./sources.json)))'
 )
