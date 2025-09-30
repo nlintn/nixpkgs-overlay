@@ -30,8 +30,8 @@
     "type": "git"
   },
   "https://github.com/hyprwm/contrib": {
-    "narHash": "sha256-iRv5afKzuu6SkwztqMwZ33161CzBJsyeRHp0uviN9TI=",
-    "rev": "de79078fd59140067e53cd00ebdf17f96ce27846",
+    "narHash": "sha256-O3dfYBYhsdjpELmyE1czkQfG2Jzh+pzsKMhPX3QVz80=",
+    "rev": "125043bea28e5f988f4e97250213948667a26b1c",
     "submodules": false,
     "type": "git"
   },
@@ -48,8 +48,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-xBdlJyNoYrSPBxAqgwk7RFLU6kb/2W2l+C9Yypzt7iw=",
-    "rev": "bcc01b27f19287b1701951e0b4c973ad26f2cd63",
+    "narHash": "sha256-HPKiM6DzWepzmuMMob6SB7vrtkixxqSQhKXASZciVDQ=",
+    "rev": "0236fdfcf9578eb7e0caf4ab4bb4b58908c59ef7",
     "submodules": false,
     "type": "git"
   }
