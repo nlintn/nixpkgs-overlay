@@ -11,12 +11,6 @@
     "submodules": false,
     "type": "git"
   },
-  "https://github.com/Treeniks/isabelle-lsp.nvim": {
-    "narHash": "sha256-rtwhEB8Aq+2RbS4ZtydKmodwfk2N6LE5GIBdfu8Ru04=",
-    "rev": "8eaf60f08d7f3ec6782d12327fa7e1b88545bd7c",
-    "submodules": false,
-    "type": "git"
-  },
   "https://github.com/Treeniks/isabelle-syn.nvim": {
     "narHash": "sha256-f04jyExUwos9w89IeKbRdRMtWIsQYe0McAUoijq7mCA=",
     "rev": "114b06dc34edf1707be7249b5a3815733e68d4c9",
@@ -38,6 +32,12 @@
   "https://github.com/justinhj/battery.nvim": {
     "narHash": "sha256-VhfsK7Q4qdOAhmHGV5Mhflso8KeUW3OIHd5++0Dgs/s=",
     "rev": "ecc6cf13312a26179f67d3b99d203da9285b9b0a",
+    "submodules": false,
+    "type": "git"
+  },
+  "https://github.com/nlintn/isabelle-lsp.nvim": {
+    "narHash": "sha256-xvvhNm0p09E7vSQu8SauEmD1b/fG/eYZUf73J54qwdE=",
+    "rev": "eeda0ea8555718d60b3481a0c731c314a6d3c4ed",
     "submodules": false,
     "type": "git"
   },
