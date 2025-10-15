@@ -42,8 +42,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nixln-edit": {
-    "narHash": "sha256-QwnPSfQ+iKZ/R2FYrJyi5avaeL+PAbh8lswrGaxLoqQ=",
-    "rev": "4fdcf1a8acc038b3810881869be64b41f5b1085c",
+    "narHash": "sha256-Sg/aWCLWs1PpQ7HxQBqaPq6FuTCBiy3TE5k4ikiHLQw=",
+    "rev": "b778b7a08d03be30b79da6a64bdd9296a667ce3f",
     "submodules": false,
     "type": "git"
   },
