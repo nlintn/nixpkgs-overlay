@@ -38,10 +38,10 @@
     };
     "keepassxc-browser" = buildFirefoxXpiAddon {
       pname = "keepassxc-browser";
-      version = "1.9.9.6";
+      version = "1.9.10";
       addonId = "keepassxc-browser@keepassxc.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4575368/keepassxc_browser-1.9.9.6.xpi";
-      sha256 = "72e6b7d55dcd6596e0dbdcf2e245b74560a3517701c64ac3aef0d1b9634dbef2";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4592023/keepassxc_browser-1.9.10.xpi";
+      sha256 = "38926e2225ba92da0962e6675a90e1e9bf1e3b280b88014c27f3aa727f212542";
       meta = with lib;
       {
         homepage = "https://keepassxc.org/";
