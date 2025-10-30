@@ -18,8 +18,8 @@
     "type": "git"
   },
   "https://github.com/ej-shafran/compile-mode.nvim": {
-    "narHash": "sha256-Us/xHSVZyRU2tozC0iu7JLIgXbC6D3geAWNLEO+IZoA=",
-    "rev": "e94543312729df6cc6efc8a136e9a58d52099df2",
+    "narHash": "sha256-kfZ6/8m0i8pQn0E9U9XK3dUshcR0No1P3iM5maCnvX0=",
+    "rev": "0b2a059baa734da932913f555eb157637dab5cdd",
     "submodules": false,
     "type": "git"
   },
@@ -48,8 +48,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-1dZcnVN4yeqbs1BEpFjXvQR8o6Z5dbLpEA/YHWp+TxA=",
-    "rev": "5a9ec4d5811855c0fe78c9c6f93552c9b5c3a8b0",
+    "narHash": "sha256-e9nrvLEZX/cu5FXrcTT/2T6EwIgNp0YH+RK0RtmiiHc=",
+    "rev": "f5aabc45427c0a5cb184794ebc802fe015f975fd",
     "submodules": false,
     "type": "git"
   }
