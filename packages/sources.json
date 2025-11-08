@@ -23,12 +23,6 @@
     "submodules": false,
     "type": "git"
   },
-  "https://github.com/hyprwm/contrib": {
-    "narHash": "sha256-PzgQJydp+RlKvwDi807pXPlURdIAVqLppZDga3DwPqg=",
-    "rev": "32e1a75b65553daefb419f0906ce19e04815aa3a",
-    "submodules": false,
-    "type": "git"
-  },
   "https://github.com/justinhj/battery.nvim": {
     "narHash": "sha256-VhfsK7Q4qdOAhmHGV5Mhflso8KeUW3OIHd5++0Dgs/s=",
     "rev": "ecc6cf13312a26179f67d3b99d203da9285b9b0a",
