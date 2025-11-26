@@ -9,11 +9,13 @@ let
 
   pkgs' = pkgs.extend (_: _: { inherit fetchSources; });
 
+  withArgs = f: pkg: self: f pkg (builtins.intersectAttrs (builtins.functionArgs pkg) self);
+
   by-path-files = builtins.filter (f: lib.hasSuffix "default.nix" f) (lib.filesystem.listFilesRecursive ./by-path);
-  by-path = lib'.filesToAttrs (f: pkgs'.callPackage (import f fetchSources) {}) ./by-path "default.nix" by-path-files;
+  by-path = self: lib'.filesToAttrs (f: withArgs pkgs'.callPackage (import f fetchSources) self) ./by-path "default.nix" by-path-files;
 
-  firefoxAddons = pkgs'.callPackages ./firefoxAddons {};
+  firefoxAddons = self: withArgs pkgs'.callPackages (import ./firefoxAddons) self;
 
-  merged = by-path // { inherit firefoxAddons; };
+  merged = self: by-path self // { firefoxAddons = firefoxAddons self; };
 in
-  merged
+  lib.fix merged
