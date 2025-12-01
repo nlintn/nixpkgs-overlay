@@ -41,6 +41,12 @@
     "submodules": false,
     "type": "git"
   },
+  "https://github.com/nlintn/nvim-config": {
+    "narHash": "sha256-Zn6MZ/yVYALKIHqlmvMaud75JV5KF/su5OWEJqwc/eQ=",
+    "rev": "16c81f11c3640513522091c56c8f23574f97b3aa",
+    "submodules": false,
+    "type": "git"
+  },
   "https://github.com/sameerasw/my-internet": {
     "narHash": "sha256-VFKF+TkEz6RLxjYRta0DcrVRq01jWWT/uU4pTRZfKzM=",
     "rev": "55e0d40ccec5d81aa0bfb5d213e2615446282217",
