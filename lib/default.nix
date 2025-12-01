@@ -23,6 +23,8 @@ let
           value = f file;
         }) files;
       in builtins.foldl' lib.recursiveUpdate {} (builtins.map ({ attr_path, value }: lib.setAttrByPath attr_path value) attr_paths);
+    recursiveExtend = base: override:
+      builtins.mapAttrs (n: v: if base ? ${n} && base.${n} ? extend then base.${n}.extend (final: prev: recursiveExtend prev v) else v) override;
   };
   lib' = lib // main;
 in main // {

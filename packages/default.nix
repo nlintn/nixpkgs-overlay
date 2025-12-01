@@ -7,14 +7,12 @@ let
   sources = builtins.fromJSON (builtins.readFile ./sources.json);
   fetchSources = url: (builtins.fetchTree (sources.${url} // { inherit url; }));
 
-  pkgs' = pkgs.extend (_: _: { inherit fetchSources; });
-
-  withArgs = f: pkg: self: f pkg (builtins.intersectAttrs (builtins.functionArgs pkg) self);
+  pkgs' = self: pkgs.extend (_: prev: lib'.recursiveExtend prev (self // { inherit fetchSources; }));
 
   by-path-files = builtins.filter (f: lib.hasSuffix "default.nix" f) (lib.filesystem.listFilesRecursive ./by-path);
-  by-path = self: lib'.filesToAttrs (f: withArgs pkgs'.callPackage (import f fetchSources) self) ./by-path "default.nix" by-path-files;
+  by-path = self: lib'.filesToAttrs (f: (pkgs' self).callPackage (import f fetchSources) {}) ./by-path "default.nix" by-path-files;
 
-  firefoxAddons = self: withArgs pkgs'.callPackages (import ./firefoxAddons) self;
+  firefoxAddons = self: (pkgs' self).callPackages (import ./firefoxAddons) {};
 
   merged = self: by-path self // { firefoxAddons = firefoxAddons self; };
 in
