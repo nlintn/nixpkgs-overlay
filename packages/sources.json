@@ -47,6 +47,12 @@
     "submodules": false,
     "type": "git"
   },
+  "https://github.com/ralismark/nix-appimage": {
+    "narHash": "sha256-jd0QwCVz4O1sHHkeaZILD/7D6oyalceEJ4EFnWCgm0k=",
+    "rev": "7946addbc0d97e358a6d7aefe5e82310f0fe6b18",
+    "submodules": false,
+    "type": "git"
+  },
   "https://github.com/sameerasw/my-internet": {
     "narHash": "sha256-VFKF+TkEz6RLxjYRta0DcrVRq01jWWT/uU4pTRZfKzM=",
     "rev": "55e0d40ccec5d81aa0bfb5d213e2615446282217",
