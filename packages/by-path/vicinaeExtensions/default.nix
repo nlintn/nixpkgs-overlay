@@ -18,6 +18,7 @@ in lib.pipe (builtins.readDir "${extensions}/extensions") [
   (lib.flip builtins.removeAttrs [
     # TODO: fails to build due to node-gyp
     "dbus"
+    "pass"
     "systemd"
   ])
 ]
