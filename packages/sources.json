@@ -42,8 +42,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-Zn6MZ/yVYALKIHqlmvMaud75JV5KF/su5OWEJqwc/eQ=",
-    "rev": "16c81f11c3640513522091c56c8f23574f97b3aa",
+    "narHash": "sha256-j0v076vgxvUpkQ77SmvGeXARY0hDxgjFvlhgPvzGMAQ=",
+    "rev": "8a15f58b299caf1ec5b42e6f24e09d6bbf79afd9",
     "submodules": false,
     "type": "git"
   },
@@ -54,20 +54,20 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-VFKF+TkEz6RLxjYRta0DcrVRq01jWWT/uU4pTRZfKzM=",
-    "rev": "55e0d40ccec5d81aa0bfb5d213e2615446282217",
+    "narHash": "sha256-ZQ8oniVtYXGjVrSMjH0j5XSjyW3xU3jx6xCyKiZ61aY=",
+    "rev": "76b809e0c943140845ccf0ec5783eb50cf947a27",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-C2b6upygLE6xUP/cTSKZfVjMXOXOOqpP5Xmgb9r2dhA=",
-    "rev": "ec7334e9bb636f4771580238bd3569b58dbce879",
+    "narHash": "sha256-vkcO1qA11FmBg4JXD5VzpcZ7yZmczuBEzSYj112N7+o=",
+    "rev": "1991d5454eb8bd5d265fd1daf006701656036a8b",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-orsv0YJ6e6Sm6/ft56spin/npDf2xXKls1B7HauJ4dk=",
-    "rev": "63304cee4a967f30eeca7d875f6c9a8ff4454050",
+    "narHash": "sha256-yvFfeCAjmpC2TLxDT451z7H739hTephrluJ/3czrvsQ=",
+    "rev": "4483dd69f9185d71145f8c73c6380e7eb6c2ba54",
     "submodules": false,
     "type": "git"
   }
