@@ -36,8 +36,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nixln-edit": {
-    "narHash": "sha256-Sg/aWCLWs1PpQ7HxQBqaPq6FuTCBiy3TE5k4ikiHLQw=",
-    "rev": "b778b7a08d03be30b79da6a64bdd9296a667ce3f",
+    "narHash": "sha256-mNbvrANYM21o9/lmpj96q1wpn9hxGbd5rSlHiT5CiW4=",
+    "rev": "a101ae1e34e5cb705b43a7c197916cf65c9cdabb",
     "submodules": false,
     "type": "git"
   },
@@ -66,8 +66,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-yvFfeCAjmpC2TLxDT451z7H739hTephrluJ/3czrvsQ=",
-    "rev": "4483dd69f9185d71145f8c73c6380e7eb6c2ba54",
+    "narHash": "sha256-o/0emFrTtNzfxQis6U1onAJMR63APCigiZNmqLxVM1E=",
+    "rev": "d50101fc04c76a9acc3785da5459f6884fc6984b",
     "submodules": false,
     "type": "git"
   }
