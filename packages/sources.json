@@ -54,8 +54,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-yBKnmFLq8WbC/Y08T/ZWHJaiYgTzCqtsjXh6OSBkdxs=",
-    "rev": "8270c76c2940a774f30965a0f1f2b89d4e94974f",
+    "narHash": "sha256-cuhY2px1kU4rN2fTelEvVa7Dm1C9W2riLQe/eIkZ8KE=",
+    "rev": "716c6d1734e929dbd3d392b2ad0aafbad17a48d5",
     "submodules": false,
     "type": "git"
   },
@@ -66,8 +66,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-0Ov+uNZXek0RjwvBniCrlzcs12WRNfWi/eVTjKbfHxA=",
-    "rev": "887605ae1af3612b683ff79d22d17335c8fc6b86",
+    "narHash": "sha256-X0BnS+bb7pj8LwIaTkJeU9CZ8Nqh4sNjyN5JQXggOvc=",
+    "rev": "b6229556c2cbabda6ce9c63863b11265b2dba134",
     "submodules": false,
     "type": "git"
   }
