@@ -1,4 +1,5 @@
 fetchSources:
+_:
 
 { lib,
   mkVicinaeExtension

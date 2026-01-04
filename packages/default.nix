@@ -10,7 +10,7 @@ let
   pkgs' = self: pkgs.extend (_: prev: lib'.recursiveExtend prev (self // { inherit fetchSources; }));
 
   by-path-files = builtins.filter (f: lib.hasSuffix "default.nix" f) (lib.filesystem.listFilesRecursive ./by-path);
-  by-path = self: lib'.filesToAttrs (f: (pkgs' self).callPackage (import f fetchSources) {}) ./by-path "default.nix" by-path-files;
+  by-path = self: lib'.filesToAttrs (f: (pkgs' self).callPackage (import f fetchSources pkgs) {}) ./by-path "default.nix" by-path-files;
 
   firefoxAddons = self: (pkgs' self).callPackages (import ./firefoxAddons) {};
 

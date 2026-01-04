@@ -1,4 +1,5 @@
 fetchSources:
+_:
 
 { acpi
 , lua51Packages
