@@ -5,7 +5,7 @@ let
 in {
   options.programs.thunar = {
     enable = lib.mkEnableOption "Thunar";
-    package = lib.mkPackageOption pkgs [ "xfce" "thunar" ] { };
+    package = lib.mkPackageOption pkgs "thunar" { };
     finalPackage = lib.mkOption {
       description = "The wrapped thunar package";
       readOnly = true;
