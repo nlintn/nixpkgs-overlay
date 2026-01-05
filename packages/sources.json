@@ -18,8 +18,8 @@
     "type": "git"
   },
   "https://github.com/ej-shafran/compile-mode.nvim": {
-    "narHash": "sha256-EVBmlPYQZy2OCDB+lRVS9dMAMUM5Bmd4N6+yhCwyQuU=",
-    "rev": "d7b1e165f7e90b8152c74953fd06d41e849e2608",
+    "narHash": "sha256-lxpz41IPJ90DSMy8tf1Gsnem54BrIheINyiwtEEHk5Y=",
+    "rev": "cf1c0acca12d54157343ebe0553fb1110a6b2d93",
     "submodules": false,
     "type": "git"
   },
@@ -42,8 +42,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-j0v076vgxvUpkQ77SmvGeXARY0hDxgjFvlhgPvzGMAQ=",
-    "rev": "8a15f58b299caf1ec5b42e6f24e09d6bbf79afd9",
+    "narHash": "sha256-r+9qjrUlbBwkbMXz4LPXa8JOvWa6JGskJkMmoIOrmzs=",
+    "rev": "e417ee4d1e9106914f9810732025f9e2cbf953a1",
     "submodules": false,
     "type": "git"
   },
@@ -60,8 +60,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-cuhY2px1kU4rN2fTelEvVa7Dm1C9W2riLQe/eIkZ8KE=",
-    "rev": "716c6d1734e929dbd3d392b2ad0aafbad17a48d5",
+    "narHash": "sha256-1KZe8OLyxhS5QTcIM6DJaIW/cVAGq7uOagVhtrM1hnI=",
+    "rev": "e0eac79f20fae89015074ee868b54517203dff53",
     "submodules": false,
     "type": "git"
   },
@@ -72,8 +72,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-bzdD637oY/d23QH7CKbyndBmmTBIM19HsnPtj49xCM0=",
-    "rev": "68faea42c62862614e071cee329486d907b3641a",
+    "narHash": "sha256-22Iw3fka3S6rygdzMTKmwDVEIPRB9f238eln3QiYEdY=",
+    "rev": "9d30e33b14248ad2f8b8bc55f488f1f552b8fec0",
     "submodules": false,
     "type": "git"
   }
