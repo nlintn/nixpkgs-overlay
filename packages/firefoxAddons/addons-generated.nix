@@ -67,6 +67,29 @@
         platforms = platforms.all;
       };
     };
+    "simplelogin" = buildFirefoxXpiAddon {
+      pname = "simplelogin";
+      version = "3.0.7";
+      addonId = "addon@simplelogin";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4458602/simplelogin-3.0.7.xpi";
+      sha256 = "8e91d0b7e2bc76746818dd8cc533ea525b9c3cfd433fba52da4766a83f579ded";
+      meta = with lib;
+      {
+        homepage = "https://simplelogin.io";
+        description = "Create a different email for each website to hide your real email. Guard your inbox against spams, phishing. Protect your privacy.";
+        license = licenses.mit;
+        mozPermissions = [
+          "activeTab"
+          "storage"
+          "contextMenus"
+          "scripting"
+          "tabs"
+          "http://*/*"
+          "https://*/*"
+        ];
+        platforms = platforms.all;
+      };
+    };
     "ublock-origin" = buildFirefoxXpiAddon {
       pname = "ublock-origin";
       version = "1.68.0";
