@@ -47,12 +47,6 @@
     "submodules": false,
     "type": "git"
   },
-  "https://github.com/nvim-treesitter/nvim-treesitter-textobjects": {
-    "narHash": "sha256-5VeIAW09my+4fqXbzVG7RnLXrjpXAk/g2vd7RbhNws8=",
-    "ref": "main",
-    "rev": "28a3494c075ef0f353314f627546537e43c09592",
-    "type": "git"
-  },
   "https://github.com/ralismark/nix-appimage": {
     "narHash": "sha256-jd0QwCVz4O1sHHkeaZILD/7D6oyalceEJ4EFnWCgm0k=",
     "rev": "7946addbc0d97e358a6d7aefe5e82310f0fe6b18",
