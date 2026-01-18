@@ -1,30 +1,21 @@
 #!/usr/bin/env bash
+
 set -eu -o pipefail
-builtin cd -- "$(dirname "$0")"
-echo -e " + $(pwd)/$(basename "$0")\n"
+
+BASE_PATH="$(dirname "${0}")"
+echo -e " + ${0}\n"
 
 export NIXPKGS NIX_PATH
-NIXPKGS="$(nix-instantiate --eval --expr --raw '(builtins.getFlake (builtins.toString ./..)).inputs.nixpkgs.outPath')"
-NIX_PATH="nixpkgs=flake:$NIXPKGS"
+NIXPKGS="$(nix-instantiate --eval --raw --argstr basePath "${BASE_PATH}" \
+    --expr '{ basePath }: (builtins.getFlake (builtins.toString ./${basePath}/..)).inputs.nixpkgs.outPath')"
+NIX_PATH="nixpkgs=flake:${NIXPKGS}"
 
-prev_json=$(cat sources.json)
-json=$(nix-instantiate --option substitute false --eval --raw --argstr nixpkgs "$NIXPKGS" --expr '
-    { nixpkgs }:
-    let
-        pkgs = import nixpkgs {};
-        lib = pkgs.lib;
-        filterTreeArgs = type: lib.filterAttrs (n: _: builtins.elem n {
-          git = [ "url" "ref" "submodules" ];
-        }.${type});
-    in builtins.toJSON (
-        builtins.mapAttrs (url: { type ? "git", ... } @ args:
-            (attrs: { inherit type; } // args // (lib.filterAttrs (n: _: n == "narHash" || n == "rev") attrs))
-            (builtins.fetchTree (filterTreeArgs type args // { inherit type url; })))
-        (builtins.fromJSON (builtins.readFile ./sources.json)))'
-)
-echo "$json" | jq --sort-keys . > sources.json
-echo -e "updated $(pwd)/sources.json"
-diff --color --ignore-all-space --initial-tab --unified=1 <(echo "$prev_json" | jq --sort-keys .) sources.json || true
+prev_json="$(< "${BASE_PATH}/sources.json")"
+nix-instantiate --option substitute false --eval --raw --argstr json "${prev_json}" --argstr nixpkgs "$NIXPKGS" "${BASE_PATH}/sources-update.nix" \
+    | jq --sort-keys . > "${BASE_PATH}/sources.json"
+
+echo -e "updated ${BASE_PATH}/sources.json"
+diff --color --ignore-all-space --initial-tab --unified=1 <(jq --sort-keys . <<< "${prev_json}") "${BASE_PATH}/sources.json" || :
 echo
 
-find . -regex './.*/sources-update\.sh' -exec '{}' ';'
+find "${BASE_PATH}" -regex "${BASE_PATH}/.*/sources-update\.sh" -exec '{}' ';'
