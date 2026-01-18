@@ -90,6 +90,27 @@
         platforms = platforms.all;
       };
     };
+    "tabwrangler" = buildFirefoxXpiAddon {
+      pname = "tabwrangler";
+      version = "7.8.0";
+      addonId = "{81b74d53-9416-4fb3-afa2-ab46684b253b}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4438127/tabwrangler-7.8.0.xpi";
+      sha256 = "1371955dc30d64c664ea8f644b95615dd5c44997bb7456457089c58941eecf69";
+      meta = with lib;
+      {
+        homepage = "https://github.com/tabwrangler/tabwrangler/";
+        description = "Automatically closes inactive tabs and makes it easy to get them back";
+        license = licenses.mit;
+        mozPermissions = [
+          "alarms"
+          "contextMenus"
+          "sessions"
+          "storage"
+          "tabs"
+        ];
+        platforms = platforms.all;
+      };
+    };
     "ublock-origin" = buildFirefoxXpiAddon {
       pname = "ublock-origin";
       version = "1.68.0";
@@ -125,6 +146,47 @@
           "https://github.com/uBlockOrigin/*"
           "https://ublockorigin.github.io/*"
           "https://*.reddit.com/r/uBlockOrigin/*"
+        ];
+        platforms = platforms.all;
+      };
+    };
+    "video-downloadhelper" = buildFirefoxXpiAddon {
+      pname = "video-downloadhelper";
+      version = "10.1.37.2";
+      addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4666829/video_downloadhelper-10.1.37.2.xpi";
+      sha256 = "d03856480b1cd8d955571140065ceddc4d704c096c3327dd04737aff1299547b";
+      meta = with lib;
+      {
+        homepage = "http://www.downloadhelper.net/";
+        description = "Download videos from the web. Easy, smart, no tracking.";
+        mozPermissions = [
+          "tabs"
+          "downloads"
+          "webRequest"
+          "webNavigation"
+          "scripting"
+          "declarativeNetRequest"
+          "storage"
+          "notifications"
+          "contextMenus"
+          "*://*.youtube.com/*"
+          "*://*.vimeo.com/*"
+          "*://*.facebook.com/*"
+          "*://*.instagram.com/*"
+          "*://*.ok.ru/*"
+          "*://*.m.ok.ru/*"
+          "*://vk.com/*"
+          "*://vk.ru/*"
+          "*://vkvideo.ru/*"
+          "*://live.vkvideo.ru/*"
+          "*://*.canva.com/*"
+          "*://*.iq.com/*"
+          "*://*.twitcasting.tv/*"
+          "https://v10.downloadhelper.net/activate*"
+          "https://app.v10.downloadhelper.net/activate*"
+          "https://v10.downloadhelper.net/changelog*"
+          "https://app.v10.downloadhelper.net/changelog*"
         ];
         platforms = platforms.all;
       };
