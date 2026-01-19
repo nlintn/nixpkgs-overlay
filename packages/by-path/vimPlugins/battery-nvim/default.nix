@@ -1,10 +1,10 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ acpi
-, lua51Packages
-, neovimUtils
-, writeText
+{
+  acpi,
+  lua51Packages,
+  neovimUtils,
+  writeText,
 }:
 
 neovimUtils.buildNeovimPlugin rec {
@@ -13,7 +13,10 @@ neovimUtils.buildNeovimPlugin rec {
     pname = name;
     version = "scm-1";
     src = fetchSources "https://github.com/justinhj/battery.nvim";
-    propagatedBuildInputs = with lua51Packages; [ plenary-nvim nvim-web-devicons ];
+    propagatedBuildInputs = with lua51Packages; [
+      plenary-nvim
+      nvim-web-devicons
+    ];
     buildInputs = [ acpi ];
     disabled = lua51Packages.lua.luaversion != "5.1";
     knownRockspec = writeText "${pname}-${version}.rockspec" ''

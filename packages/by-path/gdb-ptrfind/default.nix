@@ -1,14 +1,17 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ gdb
-, stdenvNoCC
+{
+  gdb,
+  stdenvNoCC,
 }:
 
 stdenvNoCC.mkDerivation {
   name = "gdb-ptrfind";
-  src = (fetchSources "https://github.com/ChaChaNop-Slide/ptrfind");
-  phases = [ "unpackPhase" "installPhase" ];
+  src = fetchSources "https://github.com/ChaChaNop-Slide/ptrfind";
+  phases = [
+    "unpackPhase"
+    "installPhase"
+  ];
   installPhase = ''
     mkdir -p $out
     cp $src/ptrfind.py $out/

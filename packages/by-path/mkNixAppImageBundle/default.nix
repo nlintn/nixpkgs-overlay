@@ -1,9 +1,10 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ stdenv
+{
+  stdenv,
 }:
 
 let
   src = fetchSources "https://github.com/ralismark/nix-appimage";
-in (import src).bundlers.${stdenv.hostPlatform.system}.default
+in
+(import src).bundlers.${stdenv.hostPlatform.system}.default

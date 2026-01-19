@@ -1,9 +1,11 @@
 {
-  outputs = { self, nixpkgs, ... }:
+  outputs =
+    { self, nixpkgs, ... }:
     let
-      lib = nixpkgs.lib;
+      inherit (nixpkgs) lib;
       lib' = import ./lib lib;
-    in {
+    in
+    {
       overlays.default = import ./.;
       legacyPackages = lib'.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
 
@@ -13,7 +15,7 @@
       });
 
       lib = lib';
-      lib' = lib';
+      inherit lib';
       homeManagerModule = import ./homeManagerModule;
       homeManagerModules.default = self.homeManagerModule;
     };

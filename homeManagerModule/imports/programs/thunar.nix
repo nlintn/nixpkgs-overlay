@@ -1,8 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.programs.thunar;
-in {
+in
+{
   options.programs.thunar = {
     enable = lib.mkEnableOption "Thunar";
     package = lib.mkPackageOption pkgs "thunar" { };
@@ -12,8 +18,11 @@ in {
       type = lib.types.package;
     };
     plugins = lib.mkOption {
-      default = [];
-      example = [ pkgs.xfce.thunar-archive-plugin pkgs.xfce.thunar-media-tags-plugin ];
+      default = [ ];
+      example = [
+        pkgs.xfce.thunar-archive-plugin
+        pkgs.xfce.thunar-media-tags-plugin
+      ];
       type = lib.types.listOf lib.types.package;
     };
     daemon.enable = lib.mkOption {

@@ -1,8 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.services.wayland-pipewire-idle-inhibit;
-in {
+in
+{
   options.services.wayland-pipewire-idle-inhibit = {
     enable = lib.mkEnableOption "Wayland PipeWire Idle Inhibit";
     package = lib.mkPackageOption pkgs "wayland-pipewire-idle-inhibit" { };

@@ -1,9 +1,9 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ lua51Packages
-, neovimUtils
-, writeText
+{
+  lua51Packages,
+  neovimUtils,
+  writeText,
 }:
 
 neovimUtils.buildNeovimPlugin rec {

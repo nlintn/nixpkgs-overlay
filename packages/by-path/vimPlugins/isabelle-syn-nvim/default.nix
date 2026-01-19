@@ -1,7 +1,7 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ vimUtils
+{
+  vimUtils,
 }:
 
 vimUtils.buildVimPlugin {

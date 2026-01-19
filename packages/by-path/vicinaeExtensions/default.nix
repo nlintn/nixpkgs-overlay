@@ -1,13 +1,14 @@
-fetchSources:
-_:
+fetchSources: _:
 
-{ lib,
-  mkVicinaeExtension
+{
+  lib,
+  mkVicinaeExtension,
 }:
 
 let
   extensions = fetchSources "https://github.com/vicinaehq/extensions";
-in lib.pipe (builtins.readDir "${extensions}/extensions") [
+in
+lib.pipe (builtins.readDir "${extensions}/extensions") [
   (lib.filterAttrs (_name: type: type == "directory"))
   (lib.mapAttrs (
     name: _type:
@@ -23,7 +24,3 @@ in lib.pipe (builtins.readDir "${extensions}/extensions") [
     "systemd"
   ])
 ]
-
-
-
-

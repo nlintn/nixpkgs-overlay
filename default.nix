@@ -1,3 +1,6 @@
-final: prev: let
+final: prev:
+
+let
   lib' = import ./lib prev.lib;
-in lib'.recursiveExtend prev (import ./packages { pkgs = prev; })
+in
+lib'.recursiveExtend prev (import ./packages { pkgs = prev; })
