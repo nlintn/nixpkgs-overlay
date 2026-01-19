@@ -5,12 +5,12 @@ let
     attrsToListRecursive =
       attrs:
       let
-        aux = lib.mapAttrsToList (_: v: if builtins.isAttrs v && !lib.isDerivation v then aux v else v);
+        aux = lib.mapAttrsToList (_: v: if lib.isAttrs v && !lib.isDerivation v then aux v else v);
       in
       lib.flatten (aux attrs);
     capitalizeString =
       str: ((lib.toUpper (lib.substring 0 1 str)) + (lib.substring 1 ((lib.stringLength str) - 1) str));
-    eachSystem = nixpkgs: lib.genAttrs (builtins.attrNames nixpkgs.legacyPackages);
+    eachSystem = nixpkgs: lib.genAttrs (lib.attrNames nixpkgs.legacyPackages);
     eachSystemPkgs =
       nixpkgs: f: lib.mapAttrs (_: f) (eachSystem nixpkgs (system: import nixpkgs { inherit system; }));
     filesToAttrs =
@@ -18,7 +18,7 @@ let
       let
         prefix_to_remove' = builtins.toString prefix_to_remove;
         suffix_to_remove' = builtins.toString suffix_to_remove;
-        attr_paths = builtins.map (
+        attr_paths = lib.map (
           file':
           let
             file = builtins.toString file';
@@ -30,17 +30,17 @@ let
                   lib.removeSuffix suffix_to_remove' (lib.removePrefix prefix_to_remove' file)
                 );
               in
-              lib.sublist 1 (builtins.length path_list - 2) path_list;
+              lib.sublist 1 (lib.length path_list - 2) path_list;
             value = f file;
           }
         ) files;
       in
-      builtins.foldl' lib.recursiveUpdate { } (
-        builtins.map ({ attr_path, value }: lib.setAttrByPath attr_path value) attr_paths
+      lib.foldl lib.recursiveUpdate { } (
+        lib.map ({ attr_path, value }: lib.setAttrByPath attr_path value) attr_paths
       );
     recursiveExtend =
       base: override:
-      builtins.mapAttrs (
+      lib.mapAttrs (
         n: v:
         if base ? ${n} && base.${n} ? extend then
           base.${n}.extend (final: prev: recursiveExtend prev v)

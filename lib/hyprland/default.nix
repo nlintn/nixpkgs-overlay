@@ -3,7 +3,7 @@ lib:
 {
   evalBinds =
     mainMod: modifiers: binds:
-    (builtins.map (
+    (lib.map (
       bind:
       (
         mainMod

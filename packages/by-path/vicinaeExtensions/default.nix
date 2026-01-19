@@ -17,7 +17,7 @@ lib.pipe (builtins.readDir "${extensions}/extensions") [
       src = "${extensions}/extensions/${name}";
     }
   ))
-  (lib.flip builtins.removeAttrs [
+  (lib.flip lib.removeAttrs [
     # TODO: fails to build due to node-gyp
     "dbus"
     "pass"

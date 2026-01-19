@@ -2,7 +2,7 @@ pkgs: self:
 
 pkgs.symlinkJoin {
   name = "check-build";
-  paths = builtins.filter pkgs.lib.isDerivation (
+  paths = pkgs.lib.filter pkgs.lib.isDerivation (
     self.lib.attrsToListRecursive self.legacyPackages.${pkgs.stdenv.hostPlatform.system}
   );
 }

@@ -63,9 +63,9 @@ in
                 "e"
                 "f"
               ];
-              s' = builtins.filter (x: x != "") (lib.splitString "" (lib.toLower s));
+              s' = lib.filter (x: x != "") (lib.splitString "" (lib.toLower s));
             in
-            lib.types.str.check s && builtins.length s' == 6 && lib.all (x: lib.any (y: x == y) hex_chars) s';
+            lib.types.str.check s && lib.length s' == 6 && lib.all (x: lib.any (y: x == y) hex_chars) s';
         }
       );
     };

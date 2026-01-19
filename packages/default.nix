@@ -6,12 +6,12 @@ let
   inherit (pkgs) lib;
   lib' = import ../lib lib;
 
-  sources = builtins.fromJSON (builtins.readFile ./sources.json);
+  sources = lib.strings.fromJSON (lib.readFile ./sources.json);
   fetchSources = url: (builtins.fetchTree (sources.${url} // { inherit url; }));
 
   pkgs' = self: pkgs.extend (_: prev: lib'.recursiveExtend prev (self // { inherit fetchSources; }));
 
-  by-path-files = builtins.filter (f: lib.hasSuffix "default.nix" f) (
+  by-path-files = lib.filter (f: lib.hasSuffix "default.nix" f) (
     lib.filesystem.listFilesRecursive ./by-path
   );
   by-path =

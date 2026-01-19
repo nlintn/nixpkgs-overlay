@@ -7,7 +7,7 @@ let
     type:
     lib.filterAttrs (
       n: _:
-      builtins.elem n
+      lib.elem n
         {
           git = [
             "url"
@@ -18,8 +18,8 @@ let
         .${type}
     );
 in
-builtins.toJSON (
-  builtins.mapAttrs (
+lib.strings.toJSON (
+  lib.mapAttrs (
     url:
     {
       type ? "git",
@@ -28,5 +28,5 @@ builtins.toJSON (
     (attrs: { inherit type; } // args // (lib.filterAttrs (n: _: n == "narHash" || n == "rev") attrs)) (
       builtins.fetchTree (filterTreeArgs type args // { inherit type url; })
     )
-  ) (builtins.fromJSON json)
+  ) (lib.strings.fromJSON json)
 )
