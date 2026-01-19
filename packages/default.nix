@@ -7,7 +7,7 @@ let
   lib' = import ../lib lib;
 
   sources = lib.strings.fromJSON (lib.readFile ./sources.json);
-  fetchSources = url: (builtins.fetchTree (sources.${url} // { inherit url; }));
+  fetchSources = url: (fetchTree (sources.${url} // { inherit url; }));
 
   pkgs' = self: pkgs.extend (_: prev: lib'.recursiveExtend prev (self // { inherit fetchSources; }));
 

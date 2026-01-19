@@ -16,12 +16,12 @@ let
     filesToAttrs =
       f: prefix_to_remove: suffix_to_remove: files:
       let
-        prefix_to_remove' = builtins.toString prefix_to_remove;
-        suffix_to_remove' = builtins.toString suffix_to_remove;
+        prefix_to_remove' = toString prefix_to_remove;
+        suffix_to_remove' = toString suffix_to_remove;
         attr_paths = lib.map (
           file':
           let
-            file = builtins.toString file';
+            file = toString file';
           in
           {
             attr_path =

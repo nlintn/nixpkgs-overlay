@@ -26,7 +26,7 @@ lib.strings.toJSON (
       ...
     }@args:
     (attrs: { inherit type; } // args // (lib.filterAttrs (n: _: n == "narHash" || n == "rev") attrs)) (
-      builtins.fetchTree (filterTreeArgs type args // { inherit type url; })
+      fetchTree (filterTreeArgs type args // { inherit type url; })
     )
   ) (lib.strings.fromJSON json)
 )
