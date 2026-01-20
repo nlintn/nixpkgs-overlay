@@ -55,6 +55,8 @@ let
         else
           v
       ) override;
+    safeGetExe = x: lib.escapeShellArg (lib.getExe x);
+    safeGetExe' = x: name: lib.escapeShellArg (lib.getExe' x name);
   };
   lib' = lib // main;
 in
