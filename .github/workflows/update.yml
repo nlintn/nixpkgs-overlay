@@ -33,4 +33,4 @@ jobs:
       if: ${{ steps.changes.outcome == 'failure' }}
       uses: stefanzweifel/git-auto-commit-action@v6
       with:
-        commit_message: Update packages [automatic]
+        commit_message: "chore(deps): update lockfiles [automatic]"
