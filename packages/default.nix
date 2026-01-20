@@ -11,14 +11,12 @@ let
 
   pkgs' = self: pkgs.extend (_: prev: lib'.recursiveExtend prev (self // { inherit fetchSources; }));
 
-  by-path-files = lib.filter (f: lib.hasSuffix "default.nix" f) (
-    lib.filesystem.listFilesRecursive ./by-path
-  );
   by-path =
     self:
-    lib'.filesToAttrs (
-      f: (pkgs' self).callPackage (import f fetchSources pkgs) { }
-    ) ./by-path "default.nix" by-path-files;
+    lib.packagesFromDirectoryRecursive {
+      callPackage = (f: (pkgs' self).callPackage (import f fetchSources pkgs));
+      directory = ./by-path;
+    };
 
   firefoxAddons = self: (pkgs' self).callPackages (import ./firefoxAddons) { };
 

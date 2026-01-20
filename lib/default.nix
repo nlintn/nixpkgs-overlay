@@ -21,31 +21,6 @@ let
     eachSystem = nixpkgs: lib.genAttrs (lib.attrNames nixpkgs.legacyPackages);
     eachSystemPkgs =
       nixpkgs: f: lib.mapAttrs (_: f) (eachSystem nixpkgs (system: import nixpkgs { inherit system; }));
-    filesToAttrs =
-      f: prefix_to_remove: suffix_to_remove: files:
-      let
-        prefix_to_remove' = toString prefix_to_remove;
-        suffix_to_remove' = toString suffix_to_remove;
-        attr_paths = lib.map (
-          file':
-          let
-            file = toString file';
-          in
-          {
-            attr_path =
-              let
-                path_list = lib.splitString "/" (
-                  lib.removeSuffix suffix_to_remove' (lib.removePrefix prefix_to_remove' file)
-                );
-              in
-              lib.sublist 1 (lib.length path_list - 2) path_list;
-            value = f file;
-          }
-        ) files;
-      in
-      lib.foldl lib.recursiveUpdate { } (
-        lib.map ({ attr_path, value }: lib.setAttrByPath attr_path value) attr_paths
-      );
     recursiveExtend =
       base: override:
       lib.mapAttrs (
