@@ -60,8 +60,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-LIHf6KtfGExui0+vSTMg9EjEoGuU5Dw2FltTmvajuYs=",
-    "rev": "801ce904b6c81c27c450b16b6084695547fba446",
+    "narHash": "sha256-0W0H3TYfa4BkaY3mJyBQ/LD3WaFQcsEbWwmM1bEsTHQ=",
+    "rev": "549a2049dffcf5711177a00a63f4b79caed3f06d",
     "submodules": false,
     "type": "git"
   },
