@@ -1,3 +1,5 @@
+_: _:
+
 {
   callPackage,
   callPackages,

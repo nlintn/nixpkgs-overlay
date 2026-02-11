@@ -17,9 +17,5 @@ let
       callPackage = (f: (pkgs' self).callPackage (import f fetchSources pkgs));
       directory = ./by-path;
     };
-
-  firefoxAddons = self: (pkgs' self).callPackages (import ./firefoxAddons) { };
-
-  merged = self: by-path self // { firefoxAddons = firefoxAddons self; };
 in
-lib.fix merged
+lib.fix by-path
