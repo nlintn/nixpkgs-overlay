@@ -18,9 +18,9 @@ let
       aux attrs;
     capitalizeString =
       str: ((lib.toUpper (lib.substring 0 1 str)) + (lib.substring 1 ((lib.stringLength str) - 1) str));
-    eachSystem = nixpkgs: lib.genAttrs (lib.attrNames nixpkgs.legacyPackages);
+    eachSystem = lib.genAttrs lib.systems.flakeExposed;
     eachSystemPkgs =
-      nixpkgs: f: lib.mapAttrs (_: f) (eachSystem nixpkgs (system: import nixpkgs { inherit system; }));
+      nixpkgs: f: lib.mapAttrs (_: f) (eachSystem (system: import nixpkgs { inherit system; }));
     recursiveExtend =
       base: override:
       lib.mapAttrs (
