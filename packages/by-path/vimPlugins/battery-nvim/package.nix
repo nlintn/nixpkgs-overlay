@@ -1,46 +1,21 @@
 fetchSources: _:
 
 {
-  acpi,
-  lua51Packages,
-  neovimUtils,
-  writeText,
+  lib,
+  vimPlugins,
+  vimUtils,
 }:
 
-neovimUtils.buildNeovimPlugin rec {
-  name = "battery.nvim";
-  luaAttr = lua51Packages.buildLuarocksPackage rec {
-    pname = name;
-    version = "scm-1";
-    src = fetchSources "https://github.com/justinhj/battery.nvim";
-    propagatedBuildInputs = with lua51Packages; [
-      plenary-nvim
-      nvim-web-devicons
-    ];
-    buildInputs = [ acpi ];
-    disabled = lua51Packages.lua.luaversion != "5.1";
-    knownRockspec = writeText "${pname}-${version}.rockspec" ''
-      package = "${pname}"
-      version = "${version}"
-      source = {
-        url = ""
-      }
-      dependencies = {
-        "lua == 5.1",
-        "plenary.nvim",
-        "nvim-web-devicons",
-      }
-      build = {
-        type = "builtin",
-        modules = {
-          battery = "lua/battery/battery.lua",
-        },
-        copy_directories = {
-          "doc",
-          "plugin",
-        }
-      }
-    '';
+vimUtils.buildVimPlugin {
+  pname = "battery.nvim";
+  version = "latest";
+  src = fetchSources "https://github.com/justinhj/battery.nvim";
+  dependencies = with vimPlugins; [
+    plenary-nvim
+  ];
+  meta = {
+    description = "Neovim plugin to detect and view battery information";
+    homepage = "https://github.com/justinhj/battery.nvim";
+    license = lib.licenses.mit;
   };
-  nvimRequiredCheck = "battery";
 }
