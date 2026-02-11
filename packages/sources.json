@@ -30,8 +30,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/isabelle-lsp.nvim": {
-    "narHash": "sha256-xvvhNm0p09E7vSQu8SauEmD1b/fG/eYZUf73J54qwdE=",
-    "rev": "eeda0ea8555718d60b3481a0c731c314a6d3c4ed",
+    "narHash": "sha256-2SijIavooMFft9S/fMcH/YE77wctAP0Oneg/YAR9+LM=",
+    "rev": "3601b59d77cc4998de29f966ded7d4d959318be2",
     "submodules": false,
     "type": "git"
   },
