@@ -60,14 +60,14 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-IOaiZzKGiZ6o+12u1r+4rp/YCjwfAiHh4HqpEwF5ShA=",
-    "rev": "216d366f8fc08b3eb427ebffa25dce14c3c6ed7f",
+    "narHash": "sha256-m/OEmUIdpodyunJ4nLexiCordw0/pn1tWO3MLkoGuIM=",
+    "rev": "5bd1c123c10e4452df86c6a140f3cd5993547678",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-tfKkIWZQBpevF03/8m1yEKbkNUCr01MV48lkx+353I4=",
-    "rev": "586bb62d2ed6aaa9d4dbd0440955e41cc9a3be1f",
+    "narHash": "sha256-+aDfn8JG1CU0RYIZi4UGCziyYF2YqIji7TUeA8/2qwg=",
+    "rev": "ed054c8fcc6b4a08ae20527fba57fd5850678b44",
     "submodules": false,
     "type": "git"
   }
