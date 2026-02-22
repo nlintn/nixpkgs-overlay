@@ -22,7 +22,7 @@ in
       Install.WantedBy = [ "graphical-session.target" ];
       Service = {
         ExecStart = "${cfg.package}/bin/wayland-pipewire-idle-inhibit";
-        Restart = "always";
+        Restart = "on-failure";
         RestartSec = 10;
       };
     };
