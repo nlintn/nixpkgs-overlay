@@ -11,7 +11,7 @@ in
 {
   options.services.tumbler = {
     enable = lib.mkEnableOption "Tumbler, A D-Bus thumbnailer service";
-    package = lib.mkPackageOption pkgs "tumbler";
+    package = lib.mkPackageOption pkgs "tumbler" { };
   };
 
   config = lib.mkIf cfg.enable {
