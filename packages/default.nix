@@ -19,5 +19,6 @@ lib.fix (
       callPackage = (f: (pkgs' self).callPackage (import f fetchSources pkgs));
       directory = ./by-path;
     })
+    { inherit lib'; }
   ]
 )
