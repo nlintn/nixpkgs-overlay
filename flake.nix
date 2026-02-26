@@ -3,19 +3,19 @@
     { self, nixpkgs, ... }:
     let
       inherit (nixpkgs) lib;
-      lib' = import ./lib lib;
+      lib-custom = import ./lib lib;
     in
     {
       overlays.default = import ./.;
-      legacyPackages = lib'.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
+      legacyPackages = lib-custom.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
 
-      checks = lib'.eachSystemPkgs nixpkgs (pkgs: rec {
+      checks = lib-custom.eachSystemPkgs nixpkgs (pkgs: rec {
         build = import ./check-build.nix pkgs self;
         default = build;
       });
 
-      lib = lib';
-      inherit lib';
+      lib = lib-custom;
+      inherit lib-custom;
       homeManagerModule = import ./homeManagerModule;
       homeManagerModules.default = self.homeManagerModule;
     };

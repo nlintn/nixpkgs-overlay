@@ -33,9 +33,9 @@ let
     safeGetExe = x: lib.escapeShellArg (lib.getExe x);
     safeGetExe' = x: name: lib.escapeShellArg (lib.getExe' x name);
   };
-  lib' = lib // main;
+  lib-custom = lib // main;
 in
 main
 // {
-  hyprland = import ./hyprland lib';
+  hyprland = import ./hyprland lib-custom;
 }
