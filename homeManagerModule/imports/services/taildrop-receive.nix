@@ -34,7 +34,7 @@ in
 
   config = lib.mkIf cfg.enable {
     systemd.user.tmpfiles.rules = [
-      "d  ${cfg.directory}  0700  -  -  -  -"
+      "d ${cfg.directory} 0700 - - - -"
     ];
     systemd.user.services.taildrop-receive = {
       Unit = {
