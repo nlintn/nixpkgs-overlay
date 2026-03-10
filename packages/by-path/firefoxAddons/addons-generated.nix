@@ -1,11 +1,11 @@
-{ buildFirefoxXpiAddon, fetchurl, lib, stdenv }:
+{ buildMozillaXpiAddon, fetchurl, lib, stdenv }:
   {
-    "darkreader" = buildFirefoxXpiAddon {
+    "darkreader" = buildMozillaXpiAddon {
       pname = "darkreader";
-      version = "4.9.121";
+      version = "4.9.123";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4690921/darkreader-4.9.121.xpi";
-      sha256 = "c0ec5d504e971dfbeaddc46f879c740a5f4c7c037a678ecd319afb7986fe63eb";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4710145/darkreader-4.9.123.xpi";
+      sha256 = "9a3e6cdac53f20257bd81264532c16afedad00eb2623bded89ed2b30b1e40243";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -22,7 +22,7 @@
         platforms = platforms.all;
       };
     };
-    "dictionary-german" = buildFirefoxXpiAddon {
+    "dictionary-german" = buildMozillaXpiAddon {
       pname = "dictionary-german";
       version = "2.1";
       addonId = "de-DE@dictionaries.addons.mozilla.org";
@@ -36,7 +36,7 @@
         platforms = platforms.all;
       };
     };
-    "keepassxc-browser" = buildFirefoxXpiAddon {
+    "keepassxc-browser" = buildMozillaXpiAddon {
       pname = "keepassxc-browser";
       version = "1.9.11";
       addonId = "keepassxc-browser@keepassxc.org";
@@ -67,7 +67,7 @@
         platforms = platforms.all;
       };
     };
-    "simplelogin" = buildFirefoxXpiAddon {
+    "simplelogin" = buildMozillaXpiAddon {
       pname = "simplelogin";
       version = "3.0.7";
       addonId = "addon@simplelogin";
@@ -90,7 +90,7 @@
         platforms = platforms.all;
       };
     };
-    "tabwrangler" = buildFirefoxXpiAddon {
+    "tabwrangler" = buildMozillaXpiAddon {
       pname = "tabwrangler";
       version = "7.8.0";
       addonId = "{81b74d53-9416-4fb3-afa2-ab46684b253b}";
@@ -111,7 +111,7 @@
         platforms = platforms.all;
       };
     };
-    "ublock-origin" = buildFirefoxXpiAddon {
+    "ublock-origin" = buildMozillaXpiAddon {
       pname = "ublock-origin";
       version = "1.69.0";
       addonId = "uBlock0@raymondhill.net";
@@ -150,12 +150,12 @@
         platforms = platforms.all;
       };
     };
-    "video-downloadhelper" = buildFirefoxXpiAddon {
+    "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.1.37.2";
+      version = "10.2.5.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4666829/video_downloadhelper-10.1.37.2.xpi";
-      sha256 = "d03856480b1cd8d955571140065ceddc4d704c096c3327dd04737aff1299547b";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4714322/video_downloadhelper-10.2.5.2.xpi";
+      sha256 = "9653585ea05aefd24ccb933a8778bb9cb8a014f4ee2f73cfb3e08738b1acf5b6";
       meta = with lib;
       {
         homepage = "http://www.downloadhelper.net/";
@@ -191,7 +191,7 @@
         platforms = platforms.all;
       };
     };
-    "vimium-ff" = buildFirefoxXpiAddon {
+    "vimium-ff" = buildMozillaXpiAddon {
       pname = "vimium-ff";
       version = "2.4.0";
       addonId = "{d7742d87-e61d-4b78-b8a1-b469842139fa}";
@@ -221,7 +221,7 @@
         platforms = platforms.all;
       };
     };
-    "violentmonkey" = buildFirefoxXpiAddon {
+    "violentmonkey" = buildMozillaXpiAddon {
       pname = "violentmonkey";
       version = "2.34.0";
       addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
@@ -247,7 +247,7 @@
         platforms = platforms.all;
       };
     };
-    "zen-internet" = buildFirefoxXpiAddon {
+    "zen-internet" = buildMozillaXpiAddon {
       pname = "zen-internet";
       version = "2.7.0";
       addonId = "{91aa3897-2634-4a8a-9092-279db23a7689}";

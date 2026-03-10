@@ -9,7 +9,7 @@ _: _:
 }:
 
 let
-  buildFirefoxXpiAddon = lib.makeOverridable (
+  buildMozillaXpiAddon = lib.makeOverridable (
     {
       pname,
       version,
@@ -39,7 +39,7 @@ let
     }
   );
   addons-generated = lib.makeExtensible (
-    _: callPackages ./addons-generated.nix { inherit buildFirefoxXpiAddon; }
+    _: callPackages ./addons-generated.nix { inherit buildMozillaXpiAddon; }
   );
 in
 addons-generated.extend (callPackage ./overrides.nix { })
