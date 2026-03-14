@@ -24,8 +24,8 @@
     "type": "git"
   },
   "https://github.com/justinhj/battery.nvim": {
-    "narHash": "sha256-VhfsK7Q4qdOAhmHGV5Mhflso8KeUW3OIHd5++0Dgs/s=",
-    "rev": "ecc6cf13312a26179f67d3b99d203da9285b9b0a",
+    "narHash": "sha256-pHV7uzIMyXdubtY2p/ek3FEl+MBoCv9tEZFTlUKnhNY=",
+    "rev": "e5579345881c70be5b7370fc9538cc95a4fe458d",
     "submodules": false,
     "type": "git"
   },
@@ -54,8 +54,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-MwddbapjD+CnQPo0FaG7nfJ5aFIH8e2uGEuIhSYU2JM=",
-    "rev": "04631295886c9f3b9b02931f7aae55d852f2540e",
+    "narHash": "sha256-U8RxefMnVKBORGW0TJURorIJMl6b8Ac5t8LCgjcUt4w=",
+    "rev": "1001edb6ac29669d6f72cbe676feb89df4c36c9f",
     "submodules": false,
     "type": "git"
   },
@@ -67,8 +67,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-Yw6VKOsfnyvOke4VqpZIpNqTeHK+dEH+yR8w9UUYiCQ=",
-    "rev": "1aaff7f69a295cf4914c76222fad1bd047e7e55f",
+    "narHash": "sha256-hcLe+JRYmX1ep0A3PTuUwMrGycLI2MGsUoO6rEfEF8k=",
+    "rev": "065173842e825b59e9f48f3314d0a8eff8c02d71",
     "submodules": false,
     "type": "git"
   }
