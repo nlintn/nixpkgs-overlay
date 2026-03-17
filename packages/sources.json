@@ -67,8 +67,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-Zc/SdwZ/OJjucjzmrId8vmZgbOr13UKFZ2XqQef+Qjc=",
-    "rev": "00413f046d4fc7a248bce5c60116ed7b275f6688",
+    "narHash": "sha256-rVzZeR2gsPCgft+SHbxlxldejpOBI6bwj6gC24XpEIk=",
+    "rev": "f3dc9cb4696dda1218f00f2756cf25882fa5df9b",
     "submodules": false,
     "type": "git"
   }
