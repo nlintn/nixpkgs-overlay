@@ -193,10 +193,10 @@
     };
     "vimium-ff" = buildMozillaXpiAddon {
       pname = "vimium-ff";
-      version = "2.4.0";
+      version = "2.4.2";
       addonId = "{d7742d87-e61d-4b78-b8a1-b469842139fa}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4698049/vimium_ff-2.4.0.xpi";
-      sha256 = "9ad35d0857031770e5c2f419789a5dfa8ea2fa3de7056c1dd32ca0bc81bb4d37";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4717567/vimium_ff-2.4.2.xpi";
+      sha256 = "131e2a67580e7ae9125ab19781159e61409fac47b441fc2782aab76396ead196";
       meta = with lib;
       {
         homepage = "https://github.com/philc/vimium";
@@ -249,10 +249,10 @@
     };
     "zen-internet" = buildMozillaXpiAddon {
       pname = "zen-internet";
-      version = "2.7.0";
+      version = "3.0.1";
       addonId = "{91aa3897-2634-4a8a-9092-279db23a7689}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4537733/zen_internet-2.7.0.xpi";
-      sha256 = "3c43e841136388eea54a3bf9c993482b5eaa62025a7895a852abaa6c4651d35a";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4740383/zen_internet-3.0.1.xpi";
+      sha256 = "7ca93d129af3351d6bbaa1dcce01c24031c6bb5f649e4d374b1f1d86a0111897";
       meta = with lib;
       {
         homepage = "https://www.sameerasw.com";
