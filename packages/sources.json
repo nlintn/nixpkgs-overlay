@@ -6,8 +6,8 @@
     "type": "git"
   },
   "https://github.com/LukasPietzschmann/telescope-tabs": {
-    "narHash": "sha256-5NpH9+0ECrcKi8quPLpCHLSPTuzGETWtq4E+2jqUKio=",
-    "rev": "777b1f630f3d6a12a2e71635a82581c988d6da2e",
+    "narHash": "sha256-WIuY25GFqhVV5kD/2BYA1f5qniS0xQJ9iM2/2+6N2Iw=",
+    "rev": "62c127346c04c698c0cbd1c1ba945609a0ad10db",
     "submodules": false,
     "type": "git"
   },
@@ -67,8 +67,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-Rv2E2YKKCe37HZVreQ13qrzEKmovcPPCF5uKkg8fv8E=",
-    "rev": "9c7d53c095a26e853e74f11575d4901e58883a28",
+    "narHash": "sha256-9wJPPL9fWBrZBW/HbA5f5bPJmPo44cKvsd+QX4P68qA=",
+    "rev": "c1fffc0b62c003a7384526e984ea5114b52352bc",
     "submodules": false,
     "type": "git"
   }
