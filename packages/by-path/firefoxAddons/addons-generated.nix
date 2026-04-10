@@ -2,10 +2,10 @@
   {
     "darkreader" = buildMozillaXpiAddon {
       pname = "darkreader";
-      version = "4.9.123";
+      version = "4.9.124";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4710145/darkreader-4.9.123.xpi";
-      sha256 = "9a3e6cdac53f20257bd81264532c16afedad00eb2623bded89ed2b30b1e40243";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4748915/darkreader-4.9.124.xpi";
+      sha256 = "ce703c98545999cee0b5c416f4fd4a3080f1405440f005d5c5cf23ac0868bcbd";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -38,10 +38,10 @@
     };
     "keepassxc-browser" = buildMozillaXpiAddon {
       pname = "keepassxc-browser";
-      version = "1.10.0.1";
+      version = "1.10.1";
       addonId = "keepassxc-browser@keepassxc.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4717960/keepassxc_browser-1.10.0.1.xpi";
-      sha256 = "b7ddeb144036ce22fd687a531dbc5a04bd7b3596f9fa713fc004b29b6ca28340";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4750788/keepassxc_browser-1.10.1.xpi";
+      sha256 = "f358471e7f5545a64ab69f4897127033197a8d9cde5746324b1dae241a2b0a29";
       meta = with lib;
       {
         homepage = "https://keepassxc.org/";
