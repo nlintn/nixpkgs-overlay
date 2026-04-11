@@ -152,10 +152,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.2.5.2";
+      version = "10.2.26.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4714322/video_downloadhelper-10.2.5.2.xpi";
-      sha256 = "9653585ea05aefd24ccb933a8778bb9cb8a014f4ee2f73cfb3e08738b1acf5b6";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4729133/video_downloadhelper-10.2.26.2.xpi";
+      sha256 = "23f0d69c29cbb22f6c4b17defe87a2aa22502a4abb57314c3768f71f652cdfe0";
       meta = with lib;
       {
         homepage = "http://www.downloadhelper.net/";
@@ -170,19 +170,25 @@
           "storage"
           "notifications"
           "contextMenus"
+          "unlimitedStorage"
           "*://*.youtube.com/*"
           "*://*.vimeo.com/*"
           "*://*.facebook.com/*"
           "*://*.instagram.com/*"
           "*://*.ok.ru/*"
           "*://*.m.ok.ru/*"
-          "*://vk.com/*"
-          "*://vk.ru/*"
-          "*://vkvideo.ru/*"
+          "*://*.vk.com/*"
+          "*://*.vk.ru/*"
+          "*://*.vkvideo.ru/*"
           "*://live.vkvideo.ru/*"
           "*://*.canva.com/*"
           "*://*.iq.com/*"
           "*://*.twitcasting.tv/*"
+          "*://*.bilibili.tv/*"
+          "*://*.bilibili.com/*"
+          "*://*.taiav.com/*"
+          "*://*.osmosis.org/*"
+          "*://*.kick.com/*"
           "https://v10.downloadhelper.net/activate*"
           "https://app.v10.downloadhelper.net/activate*"
           "https://v10.downloadhelper.net/changelog*"
