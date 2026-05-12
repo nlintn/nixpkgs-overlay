@@ -1,16 +1,7 @@
-fetchSources: _:
+fetchSources: prev:
 
-{
-  lib,
-  vimUtils,
-}:
+{ }:
 
-vimUtils.buildVimPlugin {
-  pname = "isabelle-lsp.nvim";
-  version = "latest";
+prev.vimPlugins.isabelle-lsp-nvim.overrideAttrs {
   src = fetchSources "https://github.com/nlintn/isabelle-lsp.nvim";
-  meta = {
-    homepage = "https://github.com/nlintn/isabelle-lsp.nvim";
-    license = lib.licenses.mit;
-  };
 }
