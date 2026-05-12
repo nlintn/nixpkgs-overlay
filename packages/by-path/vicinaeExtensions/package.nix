@@ -1,11 +1,10 @@
-# code from https://github.com/vicinaehq/extensions/blob/90c5e6f208bca1b08543a1a09d76b60ddd30d0fe/flake.nix
+# code from https://github.com/vicinaehq/extensions/blob/a8bd5e41709e32599cbb74961bbd7ee13106e6ec/flake.nix
 
 fetchSources: _:
 
 {
   lib,
   mkVicinaeExtension,
-  stdenv,
 }:
 
 let
@@ -16,19 +15,12 @@ lib.pipe (builtins.readDir "${extensions}/extensions") [
   (lib.mapAttrs (
     name: _type:
     mkVicinaeExtension {
-      inherit name;
+      pname = "vicinae-extension-${name}";
       version = "unstable";
-      src = stdenv.mkDerivation {
-        name = "${name}-patched-tsconfig";
-        src = "${extensions}/extensions/${name}";
-        buildPhase = ''
-          substituteInPlace tsconfig.json --replace "../../" "${extensions}/"
-        '';
-        installPhase = ''
-          mkdir -p $out
-          cp -r . $out
-        '';
-      };
+      src = "${extensions}/extensions/${name}";
+      postPatch = ''
+        substituteInPlace tsconfig.json --replace "../../" "${extensions}/"
+      '';
     }
   ))
   (lib.flip lib.removeAttrs [
