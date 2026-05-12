@@ -11,12 +11,6 @@
     "submodules": false,
     "type": "git"
   },
-  "https://github.com/Treeniks/isabelle-syn.nvim": {
-    "narHash": "sha256-f04jyExUwos9w89IeKbRdRMtWIsQYe0McAUoijq7mCA=",
-    "rev": "114b06dc34edf1707be7249b5a3815733e68d4c9",
-    "submodules": false,
-    "type": "git"
-  },
   "https://github.com/ej-shafran/compile-mode.nvim": {
     "narHash": "sha256-aaQ4CVJMUdNBJUYCYowXxd1oCnssnjPbpOEzIE8H+m8=",
     "rev": "dd3e952076a33faba0a55b04b2b73945832c0527",
