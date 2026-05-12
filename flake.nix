@@ -4,12 +4,13 @@
     let
       inherit (nixpkgs) lib;
       lib-custom = import ./lib lib;
+      genPkgs = lib-custom.eachSystemPkgs' nixpkgs { allowUnfree = true; } [ ];
     in
     {
       overlays.default = import ./.;
-      legacyPackages = lib-custom.eachSystemPkgs nixpkgs (pkgs: import ./packages { inherit pkgs; });
+      legacyPackages = genPkgs (pkgs: import ./packages { inherit pkgs; });
 
-      checks = lib-custom.eachSystemPkgs nixpkgs (pkgs: rec {
+      checks = genPkgs (pkgs: rec {
         build = import ./check-build.nix pkgs self;
         default = build;
       });

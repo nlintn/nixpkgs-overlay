@@ -19,8 +19,10 @@ let
     capitalizeString =
       str: ((lib.toUpper (lib.substring 0 1 str)) + (lib.substring 1 ((lib.stringLength str) - 1) str));
     eachSystem = lib.genAttrs lib.systems.flakeExposed;
-    eachSystemPkgs =
-      nixpkgs: f: lib.mapAttrs (_: f) (eachSystem (system: import nixpkgs { inherit system; }));
+    eachSystemPkgs' =
+      nixpkgs: config: overlays: f:
+      lib.mapAttrs (_: f) (eachSystem (system: import nixpkgs { inherit system config overlays; }));
+    eachSystemPkgs = nixpkgs: eachSystemPkgs' nixpkgs { } [ ];
     recursiveExtend =
       base: override:
       lib.mapAttrs (
