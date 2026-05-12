@@ -2,10 +2,10 @@
   {
     "darkreader" = buildMozillaXpiAddon {
       pname = "darkreader";
-      version = "4.9.124";
+      version = "4.9.125";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4748915/darkreader-4.9.124.xpi";
-      sha256 = "ce703c98545999cee0b5c416f4fd4a3080f1405440f005d5c5cf23ac0868bcbd";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4783321/darkreader-4.9.125.xpi";
+      sha256 = "21a9a18bc873e09b9b10f841a559807ce9e90738674c7eddb9f639c0663eaf28";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -92,10 +92,10 @@
     };
     "tabwrangler" = buildMozillaXpiAddon {
       pname = "tabwrangler";
-      version = "8.2.0";
+      version = "8.3.0";
       addonId = "{81b74d53-9416-4fb3-afa2-ab46684b253b}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4768538/tabwrangler-8.2.0.xpi";
-      sha256 = "4827e0589f1253f48d63e535e0c3b0e2b7d7ade24f9fd1070acffdd48692d4d3";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4785569/tabwrangler-8.3.0.xpi";
+      sha256 = "ae2d34c6afe09928ff0b0e68d2f8855805b39de0693ca61c123d35bf98478927";
       meta = with lib;
       {
         homepage = "https://github.com/tabwrangler/tabwrangler/";
@@ -153,10 +153,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.2.26.2";
+      version = "10.2.40.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4729133/video_downloadhelper-10.2.26.2.xpi";
-      sha256 = "23f0d69c29cbb22f6c4b17defe87a2aa22502a4abb57314c3768f71f652cdfe0";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4762685/video_downloadhelper-10.2.40.2.xpi";
+      sha256 = "e6e84291e46b1e6ae63606dc1f1548d5eab50913abf7358ffa17abe4321d070e";
       meta = with lib;
       {
         homepage = "http://www.downloadhelper.net/";
@@ -190,6 +190,9 @@
           "*://*.taiav.com/*"
           "*://*.osmosis.org/*"
           "*://*.kick.com/*"
+          "*://*.chaturbate.com/*"
+          "*://*.chaturbate.eu/*"
+          "*://*.chaturbate.global/*"
           "https://v10.downloadhelper.net/activate*"
           "https://app.v10.downloadhelper.net/activate*"
           "https://v10.downloadhelper.net/changelog*"
