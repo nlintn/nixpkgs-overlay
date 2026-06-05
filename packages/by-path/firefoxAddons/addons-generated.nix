@@ -2,10 +2,10 @@
   {
     "darkreader" = buildMozillaXpiAddon {
       pname = "darkreader";
-      version = "4.9.125";
+      version = "4.9.126";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4783321/darkreader-4.9.125.xpi";
-      sha256 = "21a9a18bc873e09b9b10f841a559807ce9e90738674c7eddb9f639c0663eaf28";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4834907/darkreader-4.9.126.xpi";
+      sha256 = "b0bd9127a60a5af8db6fa23de81f304a4ec5d7d3cd7e6e301e3eaa42339528a7";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -38,10 +38,10 @@
     };
     "keepassxc-browser" = buildMozillaXpiAddon {
       pname = "keepassxc-browser";
-      version = "1.10.1";
+      version = "1.10.3";
       addonId = "keepassxc-browser@keepassxc.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4750788/keepassxc_browser-1.10.1.xpi";
-      sha256 = "f358471e7f5545a64ab69f4897127033197a8d9cde5746324b1dae241a2b0a29";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4831838/keepassxc_browser-1.10.3.xpi";
+      sha256 = "4df9c54e0a293aa2e37e9bcf97ec307a35a00e78cebaa9a68edba552c07c4568";
       meta = with lib;
       {
         homepage = "https://keepassxc.org/";
@@ -233,10 +233,10 @@
     };
     "violentmonkey" = buildMozillaXpiAddon {
       pname = "violentmonkey";
-      version = "2.40.0";
+      version = "2.41.0";
       addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4825194/violentmonkey-2.40.0.xpi";
-      sha256 = "a2ce72e66a8aebb8aedf39f5c556cde2cf461da214cd9f3c9b130f0c73071841";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4830363/violentmonkey-2.41.0.xpi";
+      sha256 = "42d184788bd2f6a291956dd31cd45daa7b4a5d1b19bf1c74fb0ae76e456fa36b";
       meta = with lib;
       {
         homepage = "https://violentmonkey.github.io/";

@@ -18,8 +18,8 @@
     "type": "git"
   },
   "https://github.com/justinhj/battery.nvim": {
-    "narHash": "sha256-hq0YWrd25OVmUP6UgevS9GiMuFiJOcB+qOpkk4+b/Ig=",
-    "rev": "b93a29eb39d409fbcac6cb8b24dd9caf89579eeb",
+    "narHash": "sha256-+kay4hsi5IV3N/BbUBockJ2qb+zGkwjJCIwbBbW3hMg=",
+    "rev": "1de4b5922ad54c78201f6c55e558eb53a9da7dad",
     "submodules": false,
     "type": "git"
   },
@@ -61,8 +61,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-HtuBC0h1AdyOhc993ztI6E3epecM19OJZN7meXVVCwg=",
-    "rev": "00a98dfc7d7fafaeb556d64200c3d51d261f6bd9",
+    "narHash": "sha256-mqBbr4J86jOygQzhKTgKuWq8ECpU41Eds2asuZwjBIg=",
+    "rev": "91b60315ad48e8a4f1ee1a9fe61b86a6eae85195",
     "submodules": false,
     "type": "git"
   }
