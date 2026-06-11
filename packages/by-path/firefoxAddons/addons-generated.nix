@@ -2,10 +2,10 @@
   {
     "darkreader" = buildMozillaXpiAddon {
       pname = "darkreader";
-      version = "4.9.126";
+      version = "4.9.127";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4834907/darkreader-4.9.126.xpi";
-      sha256 = "b0bd9127a60a5af8db6fa23de81f304a4ec5d7d3cd7e6e301e3eaa42339528a7";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4837294/darkreader-4.9.127.xpi";
+      sha256 = "25f06b10b43270266af63c8d25e01ecf5e497bd2d5411243ee6d19b3869296ad";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -153,10 +153,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.2.40.2";
+      version = "10.2.71.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4762685/video_downloadhelper-10.2.40.2.xpi";
-      sha256 = "e6e84291e46b1e6ae63606dc1f1548d5eab50913abf7358ffa17abe4321d070e";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4835863/video_downloadhelper-10.2.71.2.xpi";
+      sha256 = "fc9c82c9e861b557faa3d54b43e6ed7936bafb2704894083e4b75b2a6d53c7f4";
       meta = with lib;
       {
         homepage = "http://www.downloadhelper.net/";
@@ -195,8 +195,6 @@
           "*://*.chaturbate.global/*"
           "https://v10.downloadhelper.net/activate*"
           "https://app.v10.downloadhelper.net/activate*"
-          "https://v10.downloadhelper.net/changelog*"
-          "https://app.v10.downloadhelper.net/changelog*"
         ];
         platforms = platforms.all;
       };
