@@ -257,10 +257,10 @@
     };
     "zen-internet" = buildMozillaXpiAddon {
       pname = "zen-internet";
-      version = "3.1.2";
+      version = "3.2.0";
       addonId = "{91aa3897-2634-4a8a-9092-279db23a7689}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4741120/zen_internet-3.1.2.xpi";
-      sha256 = "79291e0da3ce9fea332a39993c62b1f71106cc5a062f82297bbd3f2d0c873a68";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4854703/zen_internet-3.2.0.xpi";
+      sha256 = "78410e877277913f19bdcdf8ca138e08dff758fd8b9ed99d67c52681e581fd19";
       meta = with lib;
       {
         homepage = "https://www.sameerasw.com";
@@ -270,10 +270,9 @@
           "activeTab"
           "storage"
           "tabs"
-          "<all_urls>"
           "webNavigation"
-          "webRequest"
-          "webRequestBlocking"
+          "alarms"
+          "<all_urls>"
         ];
         platforms = platforms.all;
       };
