@@ -8,13 +8,11 @@ jobs:
     permissions:
       contents: read
     steps:
-    - name: checkout repo
-      uses: actions/checkout@v5
-    - name: install nix
-      uses: cachix/install-nix-action@v31
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: setup nix cache
-      uses: DeterminateSystems/magic-nix-cache-action@v13
-    - name: run build checks
-      run: nix flake check
+      - name: checkout repo
+        uses: actions/checkout@v7
+      - name: install nix
+        uses: DeterminateSystems/nix-installer-action@v22
+      - name: setup nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v14
+      - name: run build checks
+        run: nix flake check

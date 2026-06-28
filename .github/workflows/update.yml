@@ -9,28 +9,26 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: checkout repo
-      uses: actions/checkout@v5
-    - name: install nix
-      uses: cachix/install-nix-action@v31
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: setup nix cache
-      uses: DeterminateSystems/magic-nix-cache-action@v13
-    - name: update flake lock file
-      run: nix flake update
-    - name: update all packages
-      run: ./packages/sources-update.sh
-      shell: bash
-    - name: check for changes
-      id: changes
-      continue-on-error: true
-      run: git diff --exit-code --quiet
-    - name: run build checks
-      if: ${{ steps.changes.outcome == 'failure' }}
-      run: nix flake check
-    - name: commit changes
-      if: ${{ steps.changes.outcome == 'failure' }}
-      uses: stefanzweifel/git-auto-commit-action@v6
-      with:
-        commit_message: "chore(deps): update lockfiles [automatic]"
+      - name: checkout repo
+        uses: actions/checkout@v7
+      - name: install nix
+        uses: DeterminateSystems/nix-installer-action@v22
+      - name: setup nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v14
+      - name: update flake lock file
+        run: nix flake update
+      - name: update all packages
+        run: ./packages/sources-update.sh
+        shell: bash
+      - name: check for changes
+        id: changes
+        continue-on-error: true
+        run: git diff --exit-code --quiet
+      - name: run build checks
+        if: ${{ steps.changes.outcome == 'failure' }}
+        run: nix flake check
+      - name: commit changes
+        if: ${{ steps.changes.outcome == 'failure' }}
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore(deps): update lockfiles [automatic]"
