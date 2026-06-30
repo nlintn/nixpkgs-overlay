@@ -12,8 +12,8 @@
     "type": "git"
   },
   "https://github.com/ej-shafran/compile-mode.nvim": {
-    "narHash": "sha256-aaQ4CVJMUdNBJUYCYowXxd1oCnssnjPbpOEzIE8H+m8=",
-    "rev": "dd3e952076a33faba0a55b04b2b73945832c0527",
+    "narHash": "sha256-gTafDFdZ2d/xMGTTO17IvrHiN8l47HpKyeaJl2f/XDM=",
+    "rev": "026b866dfb162313c3f1573f73daece6af0da3e3",
     "submodules": false,
     "type": "git"
   },
@@ -61,8 +61,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-B/Xco1F1Vhgy16a/UL2QADaxqx4hDQhQK5aF75/TCgA=",
-    "rev": "5c71e4572259d215cc2da9d4892deb3294a1601a",
+    "narHash": "sha256-N2dtiuPBzDhwcTV13XpNCTfub1NShM1M2s3G6nA6REU=",
+    "rev": "80291f489bb08c9a76c052e8aad548b5ee32b380",
     "submodules": false,
     "type": "git"
   }

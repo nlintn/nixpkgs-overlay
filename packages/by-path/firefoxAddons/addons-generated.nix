@@ -159,7 +159,7 @@
       sha256 = "fc9c82c9e861b557faa3d54b43e6ed7936bafb2704894083e4b75b2a6d53c7f4";
       meta = with lib;
       {
-        homepage = "http://www.downloadhelper.net/";
+        homepage = "https://www.downloadhelper.net/";
         description = "Download videos from the web. Easy, smart, no tracking.";
         mozPermissions = [
           "tabs"
