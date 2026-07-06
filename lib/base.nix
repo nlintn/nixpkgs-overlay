@@ -15,8 +15,6 @@ lib:
         );
     in
     aux attrs;
-  capitalizeString =
-    str: ((lib.toUpper (lib.substring 0 1 str)) + (lib.substring 1 ((lib.stringLength str) - 1) str));
   eachSystem = lib.genAttrs lib.systems.flakeExposed;
   eachSystemPkgs' =
     nixpkgs: config: overlays: f:
