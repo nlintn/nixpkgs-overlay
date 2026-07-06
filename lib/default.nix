@@ -1,43 +1,12 @@
 lib:
 
-let
-  main = rec {
-    attrsToListRecursive =
-      attrs:
-      let
-        concatNames = n: lib.map ({ name, value }: lib.nameValuePair ([ n ] ++ name) value);
-        aux =
-          attrs:
-          lib.flatten (
-            lib.mapAttrsToList (
-              n: v:
-              if lib.isAttrs v && !lib.isDerivation v then concatNames n (aux v) else lib.nameValuePair [ n ] v
-            ) attrs
-          );
-      in
-      aux attrs;
-    capitalizeString =
-      str: ((lib.toUpper (lib.substring 0 1 str)) + (lib.substring 1 ((lib.stringLength str) - 1) str));
-    eachSystem = lib.genAttrs lib.systems.flakeExposed;
-    eachSystemPkgs' =
-      nixpkgs: config: overlays: f:
-      lib.mapAttrs (_: f) (eachSystem (system: import nixpkgs { inherit system config overlays; }));
-    eachSystemPkgs = nixpkgs: eachSystemPkgs' nixpkgs { } [ ];
-    recursiveExtend =
-      base: override:
-      lib.mapAttrs (
-        n: v:
-        if base ? ${n} && base.${n} ? extend then
-          base.${n}.extend (final: prev: recursiveExtend prev v)
-        else
-          v
-      ) override;
-    safeGetExe = x: lib.escapeShellArg (lib.getExe x);
-    safeGetExe' = x: name: lib.escapeShellArg (lib.getExe' x name);
-  };
-  lib-custom = lib // main;
-in
-main
-// {
-  hyprland = import ./hyprland lib-custom;
-}
+lib.fix (
+  self:
+  let
+    lib' = lib // self;
+  in
+  import ./base.nix lib'
+  // {
+    hyprland = import ./hyprland lib';
+  }
+)
