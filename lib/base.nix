@@ -24,9 +24,7 @@ lib:
     let
       f =
         base: override:
-        lib.mapAttrs (
-          n: v: if base ? ${n} && base.${n} ? extend then base.${n}.extend (final: prev: f v) else v
-        ) override;
+        lib.mapAttrs (n: v: base.${n}.extend or (lib.const v) (final: prev: f prev v)) override;
     in
     f;
   safeGetExe = x: lib.escapeShellArg (lib.getExe x);
