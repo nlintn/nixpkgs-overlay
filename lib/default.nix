@@ -9,5 +9,6 @@ lib.fix (
   // {
     conversions = import ./conversions.nix lib';
     hyprland = import ./hyprland lib';
+    term = import ./term.nix lib';
   }
 )
