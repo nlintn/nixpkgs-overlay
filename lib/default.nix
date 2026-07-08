@@ -7,6 +7,7 @@ lib.fix (
   in
   import ./base.nix lib'
   // {
+    conversions = import ./conversions.nix lib';
     hyprland = import ./hyprland lib';
   }
 )
