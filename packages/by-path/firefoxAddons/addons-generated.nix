@@ -151,6 +151,21 @@
         platforms = platforms.all;
       };
     };
+    "vicinae" = buildMozillaXpiAddon {
+      pname = "vicinae";
+      version = "1.0.0";
+      addonId = "firefox@vicinae.com";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4839406/vicinae-1.0.0.xpi";
+      sha256 = "996c056d556be9c9c97494403672463117973e7d1bfc10fad9f719f8c07d9426";
+      meta = with lib;
+      {
+        homepage = "https://vicinae.com";
+        description = "Connects to the Vicinae desktop app to search and switch browser tabs from the launcher.";
+        license = licenses.mit;
+        mozPermissions = [ "nativeMessaging" "tabs" ];
+        platforms = platforms.all;
+      };
+    };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
       version = "10.5.10.2";
