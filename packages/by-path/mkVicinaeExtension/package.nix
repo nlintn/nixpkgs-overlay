@@ -1,3 +1,3 @@
-fetchSources: _:
+_: prev:
 
-import "${fetchSources "https://github.com/vicinaehq/vicinae"}/nix/mkVicinaeExtension.nix"
+import "${prev.vicinae.src}/nix/mkVicinaeExtension.nix"
