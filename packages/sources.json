@@ -36,8 +36,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-OB6UJf5SwqndmRVNYq0bPinZpVc/CrcCumhavZqGc6c=",
-    "rev": "d29303b77a19585c414b796aa403e60ec2ce9e3f",
+    "narHash": "sha256-VMIdGUiaXRNz86JF+tK2N/dyZHy9Xz+H8SLyG+OMpDk=",
+    "rev": "36adf8ff9b34eb553ce5e11c12d8032352cbb6bc",
     "submodules": false,
     "type": "git"
   },
@@ -61,8 +61,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/vicinae": {
-    "narHash": "sha256-8lVGfvf6bkLW4C/3H9RYTkTBhmN7ooAliMkL+UE8YmU=",
-    "rev": "630036e784de647bcf18aedab7007ec5c4f5b2d0",
+    "narHash": "sha256-TqBB7e7ZLAf/Dz7RtwSUqkUE6I2/h03zdEEDfiTMEOs=",
+    "rev": "fdf7542d7522eec05117816635ece92efdc3d1e7",
     "submodules": false,
     "type": "git"
   }
