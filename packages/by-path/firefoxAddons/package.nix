@@ -9,6 +9,7 @@ _: _:
 }:
 
 let
+  # from https://git.sr.ht/~rycee/nur-expressions/tree/18a6dab66b23ad2b9a51048c0d3d9605b2343659/item/lib/mozilla.nix
   buildMozillaXpiAddon = lib.makeOverridable (
     {
       pname,
