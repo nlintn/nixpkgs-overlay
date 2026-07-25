@@ -1,32 +1,30 @@
-# code from https://github.com/vicinaehq/extensions/blob/a8bd5e41709e32599cbb74961bbd7ee13106e6ec/flake.nix
-
 fetchSources: _:
 
 {
   lib,
   mkVicinaeExtension,
+  pkgs,
+  stdenv,
 }:
 
 let
-  extensions = fetchSources "https://github.com/vicinaehq/extensions";
+  extensionsFlake = src: "${fetchSources src}/flake.nix";
+  system = stdenv.hostPlatform.system;
+  systems = lib.toFile "systems.nix" "[${(lib.concatStringsSep " " (lib.map lib.toJSON lib.systems.flakeExposed))}]";
+  flakeArgs = self: {
+    inherit self systems;
+    nixpkgs.legacyPackages.${system} = pkgs;
+    nixpkgs.lib = lib;
+    vicinae.lib.${system}.mkVicinaeExtension = mkVicinaeExtension;
+    vicinae.packages.${system}.mkVicinaeExtension = mkVicinaeExtension;
+  };
+  vicinaeExtensions =
+    src: (lib.fix (self: (import (extensionsFlake src)).outputs (flakeArgs self))).packages.${system};
+
+  extensions = vicinaeExtensions "https://github.com/vicinaehq/extensions";
+  extensionsLockedBluetooth = vicinaeExtensions "https://github.com/vicinaehq/extensions_locked_bluetooth";
 in
-lib.pipe (builtins.readDir "${extensions}/extensions") [
-  (lib.filterAttrs (_name: type: type == "directory"))
-  (lib.mapAttrs (
-    name: _type:
-    mkVicinaeExtension {
-      pname = "vicinae-extension-${name}";
-      version = "unstable";
-      src = "${extensions}/extensions/${name}";
-      postPatch = ''
-        substituteInPlace tsconfig.json --replace "../../" "${extensions}/"
-      '';
-    }
-  ))
-  (lib.flip lib.removeAttrs [
-    # TODO: fails to build due to node-gyp
-    "dbus"
-    "pass"
-    "systemd"
-  ])
-]
+extensions
+// {
+  bluetooth = extensions.bluetooth or extensionsLockedBluetooth.bluetooth;
+}
