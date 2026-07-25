@@ -20,9 +20,10 @@ let
 in
 lib.strings.toJSON (
   lib.mapAttrs (
-    url:
+    n:
     {
       type ? "git",
+      url ? n,
       ...
     }@args:
     (attrs: { inherit type; } // args // (lib.filterAttrs (n: _: n == "narHash" || n == "rev") attrs)) (

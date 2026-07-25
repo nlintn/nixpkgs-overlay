@@ -10,7 +10,7 @@ let
   fetchSources =
     url:
     (fetchTree (
-      (lib.filterAttrs (n: _: !lib.elem n [ "lockedRev" ]) sources.${url}) // { inherit url; }
+      { inherit url; } // (lib.filterAttrs (n: _: !lib.elem n [ "lockedRev" ]) sources.${url})
     ));
 
   pkgs' =
