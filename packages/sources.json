@@ -54,8 +54,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-iww/OcxGK8isAgNh8k4E1IJkR5bGUvEK/K+q86g2ISk=",
-    "rev": "2d5176bcb19498ff862ca1caa5eb97f03f60faac",
+    "narHash": "sha256-7kyqXXQyRVy41vWled33nJZFbtrGaBJlO4+uSE0Ct18=",
+    "rev": "3ac7d25baa16ad5f1a6227c3e4b4b21a7c3e452b",
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions_locked_bluetooth": {
