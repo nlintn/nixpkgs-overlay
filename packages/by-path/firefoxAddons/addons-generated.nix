@@ -114,10 +114,10 @@
     };
     "ublock-origin" = buildMozillaXpiAddon {
       pname = "ublock-origin";
-      version = "1.72.2";
+      version = "1.73.0";
       addonId = "uBlock0@raymondhill.net";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4888680/ublock_origin-1.72.2.xpi";
-      sha256 = "40c315b0da7871868155ecfae7a50a58dfa0920aebd865e008214986f1b7c578";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4940584/ublock_origin-1.73.0.xpi";
+      sha256 = "bccc51a773150af4af6e1fd62c7bfdeb7238b79ff2381b998fa9f2e38f64786a";
       meta = with lib;
       {
         homepage = "https://github.com/gorhill/uBlock#ublock-origin";
@@ -247,10 +247,10 @@
     };
     "violentmonkey" = buildMozillaXpiAddon {
       pname = "violentmonkey";
-      version = "2.41.0";
+      version = "2.46.0";
       addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4830363/violentmonkey-2.41.0.xpi";
-      sha256 = "42d184788bd2f6a291956dd31cd45daa7b4a5d1b19bf1c74fb0ae76e456fa36b";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4926076/violentmonkey-2.46.0.xpi";
+      sha256 = "c6952513d77911ac9f717cfb32fe63628e4bed31ef96b12ffa92e09e333e31ff";
       meta = with lib;
       {
         homepage = "https://violentmonkey.github.io/";

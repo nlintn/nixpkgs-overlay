@@ -19,17 +19,28 @@ in
     };
     plugins = lib.mkOption {
       default = [ ];
-      example = [
-        pkgs.xfce.thunar-archive-plugin
-        pkgs.xfce.thunar-media-tags-plugin
-      ];
+      example = lib.literalExpression ''
+        [
+          pkgs.xfce.thunar-archive-plugin
+          pkgs.xfce.thunar-media-tags-plugin
+        ]
+      '';
       type = lib.types.listOf lib.types.package;
     };
-    daemon.enable = lib.mkOption {
-      default = true;
-      example = false;
-      description = "Wether to enable Thunar daemon";
-      type = lib.types.bool;
+    daemon = {
+      enable = lib.mkOption {
+        default = true;
+        example = false;
+        description = "Wether to enable Thunar daemon";
+        type = lib.types.bool;
+      };
+      systemdTarget = lib.mkOption {
+        default = config.wayland.systemd.target;
+        defaultText = lib.literalExpression "config.wayland.systemd.target";
+        example = "sway-session.target";
+        description = "The systemd target that will automatically start the clipse service.";
+        type = lib.types.str;
+      };
     };
   };
 
@@ -51,6 +62,7 @@ in
           ExecStart = "${pkg}/bin/Thunar --daemon";
           BusName = "org.xfce.FileManager";
           KillMode = "process";
+          Restart = "on-failure";
         };
       };
       programs.thunar.finalPackage = pkg;

@@ -36,8 +36,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-VMIdGUiaXRNz86JF+tK2N/dyZHy9Xz+H8SLyG+OMpDk=",
-    "rev": "36adf8ff9b34eb553ce5e11c12d8032352cbb6bc",
+    "narHash": "sha256-H8yQA0cpUKMdO35sgTFB746zTfbOVq/g+J8OsKQjJLY=",
+    "rev": "0e89fbe647a42eafbd974cdb88f013e0e704f9de",
     "submodules": false,
     "type": "git"
   },
@@ -48,14 +48,14 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-SMwnzU8d1BSbnBK/avCEJM3MhT1hwAK8bIOnHT7fC1o=",
-    "rev": "6ce4877cba37452901dd5a18dbb8405c553deb8a",
+    "narHash": "sha256-P0Ihu5/JZo+kCXIAV24hLQLK5ZKV5mMhPg49dV21MQ8=",
+    "rev": "90724edccc5e5048e82fcfc104278194e65083a9",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-7kyqXXQyRVy41vWled33nJZFbtrGaBJlO4+uSE0Ct18=",
-    "rev": "3ac7d25baa16ad5f1a6227c3e4b4b21a7c3e452b",
+    "narHash": "sha256-uspI0fHn4BsbJcZ2Fv0wmoq+MErfT5xIFSrn+iuBKe0=",
+    "rev": "22bc47b8ad1907a8aaeec502696a8202fac64a00",
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions_locked_bluetooth": {
