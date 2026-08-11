@@ -36,8 +36,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-9uPRcIR1Mkns4rIBCUOlzA23Vrvhp2C/KXKBoq3J5pU=",
-    "rev": "788cce52571b9d459f736a64102dce9b03cd7f46",
+    "narHash": "sha256-agtGPMcyIurN6E/GkQVV413AM7q38M9hxRU38HCyTDk=",
+    "rev": "6262b3b21cd392801e7ca8d2056f8bde6dfa796e",
     "submodules": false,
     "type": "git"
   },
@@ -54,8 +54,8 @@
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-uspI0fHn4BsbJcZ2Fv0wmoq+MErfT5xIFSrn+iuBKe0=",
-    "rev": "22bc47b8ad1907a8aaeec502696a8202fac64a00",
+    "narHash": "sha256-waIrmOP5m5kHDmTUkGSSMKkA/uo6nHkk+ZO2Ibp+/yg=",
+    "rev": "cb09e3d12731e11760da920b1211688875b84fef",
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions_locked_bluetooth": {
