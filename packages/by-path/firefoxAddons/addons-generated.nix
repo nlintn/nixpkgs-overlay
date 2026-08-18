@@ -168,10 +168,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.5.10.2";
+      version = "10.5.35.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4891485/video_downloadhelper-10.5.10.2.xpi";
-      sha256 = "f5385166569339ea553919334bdee927fe5ff1704738bfa07e2c34f9ef5f5109";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4963802/video_downloadhelper-10.5.35.2.xpi";
+      sha256 = "f29ff5649c3e7eb4c27854160e4ee0312f432253f456b0ca00be6d46ed5ccd55";
       meta = with lib;
       {
         homepage = "https://www.downloadhelper.net/";
@@ -208,6 +208,8 @@
           "*://*.chaturbate.com/*"
           "*://*.chaturbate.eu/*"
           "*://*.chaturbate.global/*"
+          "*://*.91porna.com/*"
+          "*://*.9n6gyt.umydsfs.cc/*"
           "https://downloadhelper.net/activate*"
           "https://app.downloadhelper.net/activate*"
           "https://v10.downloadhelper.net/activate*"
