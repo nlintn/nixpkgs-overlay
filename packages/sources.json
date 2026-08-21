@@ -48,8 +48,8 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-P0Ihu5/JZo+kCXIAV24hLQLK5ZKV5mMhPg49dV21MQ8=",
-    "rev": "90724edccc5e5048e82fcfc104278194e65083a9",
+    "narHash": "sha256-a/JtEkg5DMHOjNL17lR00i5B37aZc6Ohjx6GTbPxzLw=",
+    "rev": "f3a6453942894205c8644c5b0aefb502706a462e",
     "submodules": false,
     "type": "git"
   },
