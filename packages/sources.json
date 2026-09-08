@@ -48,14 +48,14 @@
     "type": "git"
   },
   "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-pgd+wP5Pryugqyh1KekrPxwOsuSL5sf3aOlCtJ+FTPs=",
-    "rev": "4f18140aa4869475fb745df0bfd5e7e66363ebca",
+    "narHash": "sha256-xxIuGkQV7FIvpIXbjqoC86yAHRAzf+cSSlKqVy2ynK0=",
+    "rev": "6d9f585bb704772176516692a34a0c265b2d0b8b",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-EeOUdF/XWkoaGGHM1Eg7aIWzZ8QTLX3fc5cmYzrePkU=",
-    "rev": "6681a95e13b01c752e7cf4cb448162a3647b2eb8",
+    "narHash": "sha256-21i0A14Ch7kCwqr7beY/dpTPcGIYx4GHmWLNnXQ3zVQ=",
+    "rev": "f2a2aa16c02437f9d9b44d07cb33a7a3c4a8729b",
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions_locked_bluetooth": {
