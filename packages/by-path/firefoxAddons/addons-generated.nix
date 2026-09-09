@@ -168,10 +168,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.5.35.2";
+      version = "10.5.49.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4963802/video_downloadhelper-10.5.35.2.xpi";
-      sha256 = "f29ff5649c3e7eb4c27854160e4ee0312f432253f456b0ca00be6d46ed5ccd55";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5014115/video_downloadhelper-10.5.49.2.xpi";
+      sha256 = "6b2a2f953da4d52c5057872e6dc13926d3ce05e76883dcf0fb5bac40f66d7465";
       meta = with lib;
       {
         homepage = "https://www.downloadhelper.net/";
@@ -210,6 +210,7 @@
           "*://*.chaturbate.global/*"
           "*://*.91porna.com/*"
           "*://*.9n6gyt.umydsfs.cc/*"
+          "*://*.javrank.com/*"
           "https://downloadhelper.net/activate*"
           "https://app.downloadhelper.net/activate*"
           "https://v10.downloadhelper.net/activate*"
@@ -249,10 +250,10 @@
     };
     "violentmonkey" = buildMozillaXpiAddon {
       pname = "violentmonkey";
-      version = "2.48.0";
+      version = "2.49.0";
       addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4963965/violentmonkey-2.48.0.xpi";
-      sha256 = "e73e3103697cbeee3335020c31c7e3c587946929740cd78f9bff1b50bf62be34";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5009389/violentmonkey-2.49.0.xpi";
+      sha256 = "761ea6a32cee78c3263d19bbd821eafd4ea0722f10ff358ecba2739c5bff76fb";
       meta = with lib;
       {
         homepage = "https://violentmonkey.github.io/";
