@@ -12,8 +12,8 @@
     "type": "git"
   },
   "https://github.com/ej-shafran/compile-mode.nvim": {
-    "narHash": "sha256-RE2j8xgBD6yvUWCLYU173j4y25+HkYXUG5o+L9hQ/0M=",
-    "rev": "c53f063b86a31866294053cc42ae44541c10aa77",
+    "narHash": "sha256-V0JWvMr4DV2ZgoIxPIUjIcXfK3ps0D4WFK4Dp2wxR6A=",
+    "rev": "ab47d18a95b8f90ecc46f45541bc76e242696234",
     "submodules": false,
     "type": "git"
   },
