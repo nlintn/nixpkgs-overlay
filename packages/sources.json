@@ -18,8 +18,8 @@
     "type": "git"
   },
   "https://github.com/justinhj/battery.nvim": {
-    "narHash": "sha256-EjZdWzPGcfwEFierNxxAUg99i0+FEJppG5iAoeIHQFg=",
-    "rev": "450e69e704279369192b4905accc49b48a13283a",
+    "narHash": "sha256-KCiAWML6cOgxpCiZsfy7pmoEzpSSIOdq1EeOpUNgiVI=",
+    "rev": "6233a3c99a1f4ad1a5e9cf887b8d23a2ed8ff412",
     "submodules": false,
     "type": "git"
   },
