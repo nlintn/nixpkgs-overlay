@@ -92,10 +92,10 @@
     };
     "tabwrangler" = buildMozillaXpiAddon {
       pname = "tabwrangler";
-      version = "8.4.1";
+      version = "8.5.2";
       addonId = "{81b74d53-9416-4fb3-afa2-ab46684b253b}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4989975/tabwrangler-8.4.1.xpi";
-      sha256 = "0f049f66d4540e02795b833fd77960eeff7d34521657b33fa1033d63dcd7e113";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5073711/tabwrangler-8.5.2.xpi";
+      sha256 = "63445f0b4fbbfc1e07f776c66f39d9584afa981c6838777ad99dd6645345db0f";
       meta = with lib;
       {
         homepage = "https://github.com/tabwrangler/tabwrangler/";
