@@ -47,12 +47,6 @@
     "submodules": false,
     "type": "git"
   },
-  "https://github.com/sameerasw/my-internet": {
-    "narHash": "sha256-R1oC/rebfXIeCQEZDx2l8hw9xoOgdbnjq39qC7Rkjdw=",
-    "rev": "6b6b7dabc15d8131cf477bfb41e4e4135af6da82",
-    "submodules": false,
-    "type": "git"
-  },
   "https://github.com/vicinaehq/extensions": {
     "narHash": "sha256-x500JT5z1ef6AHgjU4IMS8AFVWW+UVn925mYkYGWZVc=",
     "rev": "56b0e02307f7dea3ca013e8a5c96128c700eec75",
