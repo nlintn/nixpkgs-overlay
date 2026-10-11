@@ -31,7 +31,7 @@ rec {
     mkBinds (
       lib.mapAttrsToList (n: v: {
         keys = n;
-        dispatcher = "hl.dsp.exec_cmd(\"${v}\")";
+        dispatcher = "hl.dsp.exec_cmd(\"${lib.escape [ "\"" ] v}\")";
       }) binds
     );
 
