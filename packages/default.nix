@@ -7,10 +7,23 @@ let
   lib-custom = import ../lib lib;
 
   sources = lib.strings.fromJSON (lib.readFile ./sources.json);
+  fetchers = import ./fetchers.nix;
   fetchSources =
     url:
-    (fetchTree (
-      { inherit url; } // (lib.filterAttrs (n: _: !lib.elem n [ "lockedRev" ]) sources.${url})
+    let
+      source = sources.${url};
+    in
+    (fetchers.${source.type} (
+      {
+        inherit url;
+      }
+      // (lib.filterAttrs (
+        n: _:
+        !lib.elem n [
+          "lockedRev"
+          "type"
+        ]
+      ) source)
     ));
 
   pkgs' =

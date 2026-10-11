@@ -17,6 +17,7 @@ let
         }
         .${type}
     );
+  fetchers = import ./fetchers.nix;
 in
 lib.strings.toJSON (
   lib.mapAttrs (
@@ -27,10 +28,10 @@ lib.strings.toJSON (
       ...
     }@args:
     (attrs: { inherit type; } // args // (lib.filterAttrs (n: _: n == "narHash" || n == "rev") attrs)) (
-      fetchTree (
+      fetchers.${type} (
         filterTreeArgs type args
         // {
-          inherit type url;
+          inherit url;
         }
         // (lib.optionalAttrs args.lockedRev or false { inherit (args) rev; })
       )
