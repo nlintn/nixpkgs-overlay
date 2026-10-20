@@ -98,7 +98,7 @@
       sha256 = "e5b013e5dca62b44445a9ce328024dae8521e0fa63bf4c2497f2ebc2333b4a3a";
       meta = with lib;
       {
-        homepage = "https://github.com/tabwrangler/tabwrangler/";
+        homepage = "https://tabwrangler.com/";
         description = "Automatically closes inactive tabs and makes it easy to get them back";
         license = licenses.mit;
         mozPermissions = [
