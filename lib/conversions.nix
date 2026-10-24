@@ -20,14 +20,14 @@ rec {
       in
       "${toString r},${toString g},${toString b}";
   };
-  decToARGB =
-    dec:
+  decAToARGB =
+    dec: a:
     let
-      rgb = (decToRGB (lib.bitAnd 16777215 dec));
+      rgb = decToRGB dec;
     in
     rgb
     // {
-      a = dec / 16777216;
+      inherit a;
       __toString =
         self:
         let
@@ -35,14 +35,15 @@ rec {
         in
         "${toString a},${toString rgb}";
     };
-  decToRGBA =
-    dec:
+  decToARGB = dec: decToRGB (lib.bitAnd 16777215 dec) (dec / 16777216 / 255.0);
+  decAToRGBA =
+    dec: a:
     let
-      rgb = (decToRGB (dec / 256));
+      rgb = decToRGB dec;
     in
     rgb
     // {
-      a = lib.bitAnd 255 dec;
+      inherit a;
       __toString =
         self:
         let
@@ -50,14 +51,17 @@ rec {
         in
         "${toString rgb},${toString a}";
     };
+  decToRGBA = dec: decAToRGBA (dec / 256) (lib.bitAnd 255 dec / 255.0);
 
   hexToRGB = hex: decToRGB (lib.fromHexString hex);
+  hexAToARGB = hex: decAToARGB (lib.fromHexString hex);
   hexToARGB = hex: decToARGB (lib.fromHexString hex);
+  hexAToRGBA = hex: decAToRGBA (lib.fromHexString hex);
   hexToRGBA = hex: decToRGBA (lib.fromHexString hex);
 
   rgbToDec = rgb: (rgb.r or 0 * 65536 + rgb.g or 0 * 256 + rgb.b or 0);
-  argbToDec = rgba: rgbToDec rgba + rgba.a or 0 * 16777216;
-  rgbaToDec = rgba: rgbToDec rgba * 256 + rgba.a or 0;
+  argbToDec = rgba: rgbToDec rgba + lib.floor (rgba.a or 0 * 255) * 16777216;
+  rgbaToDec = rgba: rgbToDec rgba * 256 + lib.floor (rgba.a or 0 * 255);
 
   rgbToHex = rgb: toNByteHexString 3 (rgbToDec rgb);
   argbToHex = rgb: toNByteHexString 4 (argbToDec rgb);
