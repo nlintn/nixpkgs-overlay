@@ -13,9 +13,43 @@ rec {
     r = lib.bitAnd 255 (dec / 65536);
     g = lib.bitAnd 255 (dec / 256);
     b = lib.bitAnd 255 dec;
+    __toString =
+      self:
+      let
+        inherit (self) r g b;
+      in
+      "${toString r},${toString g},${toString b}";
   };
-  decToARGB = dec: (decToRGB (lib.bitAnd 16777215 dec)) // { a = dec / 16777216; };
-  decToRGBA = dec: (decToRGB (dec / 256)) // { a = lib.bitAnd 255 dec; };
+  decToARGB =
+    dec:
+    let
+      rgb = (decToRGB (lib.bitAnd 16777215 dec));
+    in
+    rgb
+    // {
+      a = dec / 16777216;
+      __toString =
+        self:
+        let
+          inherit (self) a;
+        in
+        "${toString a},${toString rgb}";
+    };
+  decToRGBA =
+    dec:
+    let
+      rgb = (decToRGB (dec / 256));
+    in
+    rgb
+    // {
+      a = lib.bitAnd 255 dec;
+      __toString =
+        self:
+        let
+          inherit (self) a;
+        in
+        "${toString rgb},${toString a}";
+    };
 
   hexToRGB = hex: decToRGB (lib.fromHexString hex);
   hexToARGB = hex: decToARGB (lib.fromHexString hex);
