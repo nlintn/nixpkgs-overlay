@@ -18,7 +18,7 @@ rec {
       let
         inherit (self) r g b;
       in
-      "${toString r},${toString g},${toString b}";
+      "rgb(${toString r},${toString g},${toString b})";
   };
   decAToARGB =
     dec: a:
@@ -31,9 +31,14 @@ rec {
       __toString =
         self:
         let
-          inherit (self) a;
+          inherit (self)
+            a
+            r
+            g
+            b
+            ;
         in
-        "${toString a},${toString rgb}";
+        "argb(${toString a},${toString r},${toString g},${toString b})";
     };
   decToARGB = dec: decToRGB (lib.bitAnd 16777215 dec) (dec / 16777216 / 255.0);
   decAToRGBA =
@@ -47,9 +52,14 @@ rec {
       __toString =
         self:
         let
-          inherit (self) a;
+          inherit (self)
+            r
+            g
+            b
+            a
+            ;
         in
-        "${toString rgb},${toString a}";
+        "rgba(${toString r},${toString g},${toString b},${toString a})";
     };
   decToRGBA = dec: decAToRGBA (dec / 256) (lib.bitAnd 255 dec / 255.0);
 
