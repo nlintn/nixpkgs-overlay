@@ -36,8 +36,8 @@
     "type": "git"
   },
   "https://github.com/nlintn/nvim-config": {
-    "narHash": "sha256-7O1kkcACZkLlwLIwgrldze2d153fE7NdmJ9vigFYFzo=",
-    "rev": "99715e9c4ebe0e8981f0305be73892ac6963113a",
+    "narHash": "sha256-0GXojVctqLQI4JuYmo7Ie7ZBTjQs/dJL/eN49bKRZ4s=",
+    "rev": "4a5cb50664576e07cf9f8940091218420be8fa45",
     "submodules": false,
     "type": "git"
   },

@@ -153,10 +153,10 @@
     };
     "vicinae" = buildMozillaXpiAddon {
       pname = "vicinae";
-      version = "1.0.0";
+      version = "1.1";
       addonId = "firefox@vicinae.com";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4839406/vicinae-1.0.0.xpi";
-      sha256 = "996c056d556be9c9c97494403672463117973e7d1bfc10fad9f719f8c07d9426";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5154581/vicinae-1.1.xpi";
+      sha256 = "0015b61e3e5716c0512729ed380a0332d0ca1330b1cc84221d1d786e87d9b3e8";
       meta = with lib;
       {
         homepage = "https://vicinae.com";
@@ -168,10 +168,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.6.1.2";
+      version = "10.6.7.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5098021/video_downloadhelper-10.6.1.2.xpi";
-      sha256 = "81652b53dac2aa56ce3b9608ac25c5974a1844eab54fa747168520997d05d1c9";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5146939/video_downloadhelper-10.6.7.2.xpi";
+      sha256 = "abcddad43a3e5f9585078a52e95d938664a01cc1a1aeb32fad1d3bdfd6df56c2";
       meta = with lib;
       {
         homepage = "https://www.downloadhelper.net/";
