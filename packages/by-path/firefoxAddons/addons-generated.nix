@@ -114,10 +114,10 @@
     };
     "ublock-origin" = buildMozillaXpiAddon {
       pname = "ublock-origin";
-      version = "1.75.4";
+      version = "1.76.0";
       addonId = "uBlock0@raymondhill.net";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5203014/ublock_origin-1.75.4.xpi";
-      sha256 = "e2df503cce7cf5069130618c349695f62bdddb9eb8c189156d027269ae4ae267";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5225273/ublock_origin-1.76.0.xpi";
+      sha256 = "6f20ff6749193599548770539103069c20948dfcd3e61c3089a67da7bfc3be39";
       meta = with lib;
       {
         homepage = "https://github.com/gorhill/uBlock#ublock-origin";
@@ -128,6 +128,7 @@
           "dns"
           "menus"
           "privacy"
+          "publicSuffix"
           "storage"
           "tabs"
           "unlimitedStorage"
@@ -153,10 +154,10 @@
     };
     "vicinae" = buildMozillaXpiAddon {
       pname = "vicinae";
-      version = "1.1";
+      version = "1.2.0";
       addonId = "firefox@vicinae.com";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5154581/vicinae-1.1.xpi";
-      sha256 = "0015b61e3e5716c0512729ed380a0332d0ca1330b1cc84221d1d786e87d9b3e8";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5224510/vicinae-1.2.0.xpi";
+      sha256 = "a0ef790a2d1e749510ab953e65b34a8e8e04244cc4f84e47d0028882872b2280";
       meta = with lib;
       {
         homepage = "https://vicinae.com";
