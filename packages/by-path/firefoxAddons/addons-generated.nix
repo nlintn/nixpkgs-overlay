@@ -169,10 +169,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.6.7.2";
+      version = "10.7.1.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5146939/video_downloadhelper-10.6.7.2.xpi";
-      sha256 = "abcddad43a3e5f9585078a52e95d938664a01cc1a1aeb32fad1d3bdfd6df56c2";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5236821/video_downloadhelper-10.7.1.2.xpi";
+      sha256 = "8e9e6af61a6e8b011fdcbb5bd4bd4058a679e419e1828c7c9ae686922b2e3fa1";
       meta = with lib;
       {
         homepage = "https://www.downloadhelper.net/";
@@ -212,10 +212,11 @@
           "*://*.91porna.com/*"
           "*://*.9n6gyt.umydsfs.cc/*"
           "*://*.javrank.com/*"
+          "*://*.sociofyme.com/*"
+          "*://supjav.com/*"
           "https://downloadhelper.net/activate*"
           "https://app.downloadhelper.net/activate*"
           "https://v10.downloadhelper.net/activate*"
-          "https://downloadhelper.net/premium*"
         ];
         platforms = platforms.all;
       };
