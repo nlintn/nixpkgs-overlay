@@ -42,14 +42,14 @@
     "type": "git"
   },
   "https://github.com/ralismark/nix-appimage": {
-    "narHash": "sha256-jd0QwCVz4O1sHHkeaZILD/7D6oyalceEJ4EFnWCgm0k=",
-    "rev": "7946addbc0d97e358a6d7aefe5e82310f0fe6b18",
+    "narHash": "sha256-CeR1l9Dn3Q/U3A430zWtH3HB2Uhx9/v9hdlUj3Q1ZEU=",
+    "rev": "28b2101de3f7d0a30e3fff0ed4b6862adba42939",
     "submodules": false,
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions": {
-    "narHash": "sha256-UR269g8GwB5jywGcxqViVscjl8gtvRO9XjtCoGnUbSs=",
-    "rev": "181904331f5289b53ee3443f98cfa5441d399f35",
+    "narHash": "sha256-K7Izrbo+dDpT/J7nCI5ytyqARIvezaVwveRwodrdJ/k=",
+    "rev": "32fd3c37dc4da8f4a6b75642e2edc10c6b4f5d05",
     "type": "git"
   },
   "https://github.com/vicinaehq/extensions_locked_bluetooth": {
