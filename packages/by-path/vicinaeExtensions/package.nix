@@ -19,7 +19,11 @@ let
     vicinae.packages.${system}.mkVicinaeExtension = mkVicinaeExtension;
   };
   vicinaeExtensions =
-    src: (lib.fix (self: (import (extensionsFlake src)).outputs (flakeArgs self))).packages.${system};
+    src:
+    let
+      self = ((import (extensionsFlake src)).outputs (flakeArgs self)).packages.${system};
+    in
+    self;
 
   extensions = vicinaeExtensions "https://github.com/vicinaehq/extensions";
   extensionsLockedBluetooth = vicinaeExtensions "https://github.com/vicinaehq/extensions_locked_bluetooth";

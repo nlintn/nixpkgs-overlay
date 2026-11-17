@@ -26,17 +26,13 @@ let
       ) source)
     ));
 
-  pkgs' =
-    self: pkgs.extend (_: prev: lib-custom.recursiveExtend prev (self // { inherit fetchSources; }));
-
-in
-lib.fix (
-  self:
-  lib.mergeAttrsList [
+  pkgs' = pkgs.extend (_: prev: lib-custom.recursiveExtend prev (self // { inherit fetchSources; }));
+  self = lib.mergeAttrsList [
     (lib.packagesFromDirectoryRecursive {
-      callPackage = (f: (pkgs' self).callPackage (import f fetchSources pkgs));
+      callPackage = (f: pkgs'.callPackage (import f fetchSources pkgs));
       directory = ./by-path;
     })
     { inherit lib-custom; }
-  ]
-)
+  ];
+in
+self
