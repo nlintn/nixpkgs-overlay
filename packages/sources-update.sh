@@ -6,8 +6,8 @@ BASE_PATH="$(dirname "${0}")"
 echo -e " + ${0}\n"
 
 export NIXPKGS NIX_PATH
-NIXPKGS="$(nix-instantiate --eval --raw --argstr basePath "${BASE_PATH}" \
-    --expr '{ basePath }: (builtins.getFlake (builtins.toString ./${basePath}/..)).inputs.nixpkgs.outPath')"
+NIXPKGS="$(nix build --impure --no-link --print-out-paths \
+    --expr "(builtins.getFlake \"$(realpath "${BASE_PATH}/..")\").inputs.nixpkgs.outPath")"
 NIX_PATH="nixpkgs=flake:${NIXPKGS}"
 
 prev_json="$(<"${BASE_PATH}/sources.json")"
