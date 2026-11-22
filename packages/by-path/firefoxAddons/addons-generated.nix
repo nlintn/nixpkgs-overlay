@@ -92,10 +92,10 @@
     };
     "tabwrangler" = buildMozillaXpiAddon {
       pname = "tabwrangler";
-      version = "9.1.1";
+      version = "9.2.0";
       addonId = "{81b74d53-9416-4fb3-afa2-ab46684b253b}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5114952/tabwrangler-9.1.1.xpi";
-      sha256 = "e5b013e5dca62b44445a9ce328024dae8521e0fa63bf4c2497f2ebc2333b4a3a";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5282214/tabwrangler-9.2.0.xpi";
+      sha256 = "c38707052079b16c69014c8bef57b33f8ae6db0d4eba4f1ea706a5e8b337755b";
       meta = with lib;
       {
         homepage = "https://tabwrangler.com/";
@@ -114,10 +114,10 @@
     };
     "ublock-origin" = buildMozillaXpiAddon {
       pname = "ublock-origin";
-      version = "1.76.4";
+      version = "1.76.6";
       addonId = "uBlock0@raymondhill.net";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5257481/ublock_origin-1.76.4.xpi";
-      sha256 = "66d0e3f21ce3b32b1bc0a9399b93cb2c9aa598ef18805d92118c76f66e266c1e";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5282683/ublock_origin-1.76.6.xpi";
+      sha256 = "debffadf7d5117bd2d4e9218e27bfdf3112544fd2e87f14882d274a11dc95375";
       meta = with lib;
       {
         homepage = "https://github.com/gorhill/uBlock#ublock-origin";
