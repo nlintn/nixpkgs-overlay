@@ -22,6 +22,6 @@
     };
 
   inputs = {
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
   };
 }
