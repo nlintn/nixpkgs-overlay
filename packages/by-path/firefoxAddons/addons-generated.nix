@@ -169,10 +169,10 @@
     };
     "video-downloadhelper" = buildMozillaXpiAddon {
       pname = "video-downloadhelper";
-      version = "10.7.1.2";
+      version = "10.7.9.2";
       addonId = "{b9db16a4-6edc-47ec-a1f4-b86292ed211d}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/5236821/video_downloadhelper-10.7.1.2.xpi";
-      sha256 = "8e9e6af61a6e8b011fdcbb5bd4bd4058a679e419e1828c7c9ae686922b2e3fa1";
+      url = "https://addons.mozilla.org/firefox/downloads/file/5303327/video_downloadhelper-10.7.9.2.xpi";
+      sha256 = "e6ef7a98b4cda8c351678f7f983e74c9f266e8988ff64182ef95e5a6de7998a9";
       meta = with lib;
       {
         homepage = "https://www.downloadhelper.net/";
@@ -192,6 +192,7 @@
           "*://*.vimeo.com/*"
           "*://*.facebook.com/*"
           "*://*.instagram.com/*"
+          "*://*.threads.com/*"
           "*://*.ok.ru/*"
           "*://*.m.ok.ru/*"
           "*://*.vk.com/*"
